@@ -1,0 +1,21 @@
+#devops-track {
+  border-left: 4px solid #22d3ee;
+  padding-left: 1rem;
+}
+
+.project {
+  background: #020617;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.2rem;
+  border: 1px solid #1e293b;
+}
+
+.project h4 {
+  color: #22d3ee;
+}
+
+.project-tech {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
