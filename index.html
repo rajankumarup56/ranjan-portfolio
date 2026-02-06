@@ -2,151 +2,91 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Ranjan | AI / DevOps & Backend Portfolio</title>
+  <title>Ranjan | AI/DevOps & Backend Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="main.css" />
+
+  <link rel="stylesheet" href="css/main.css" />
 </head>
 
 <body>
 
-<header class="hero">
+  <!-- HERO -->
+  <header class="hero">
+    <img src="assets/images/profile.png" alt="Ranjan Profile" class="profile-pic" />
 
-  <!-- PROFILE IMAGE -->
-  <div class="profile-pic-wrapper">
-    <img
-      src="assets/images/profile.jpg"
-      alt="Ranjan Kumar Upadhyay"
-      class="profile-pic"
-    />
-  </div>
+    <h1>Ranjan Kumar Upadhyay</h1>
 
-  <h1>Ranjan Kumar Upadhyay</h1>
-
-  <p class="tagline">
-    MCA (Cyber Security) | AI / DevOps Analyst | Backend Developer
-  </p>
-
-  <p class="portfolio-message">
-    This portfolio reflects my learning journey in AI/DevOps and Backend development,
-    aligned with my MCA (Cyber Security) program and real-world projects.
-  </p>
-
-  <div class="track-toggle">
-    <button id="devopsBtn" class="active">AI / DevOps Track</button>
-    <button id="backendBtn">Backend Track</button>
-  </div>
-
-</header>
-
-
-<main>
-
-<section class="track">
-  <h2>AI / DevOps Track</h2>
-
-  <p class="intro">
-    Focused on cloud monitoring, security visibility, and DevOps fundamentals,
-    aligned with my MCA (Cyber Security) program and hands-on learning.
-  </p>
-
-  <h3>Core Skills</h3>
-  <ul class="skills">
-    <li>AWS CloudTrail & CloudWatch (Log monitoring & alerts)</li>
-    <li>Cloud Monitoring & Log Analysis</li>
-    <li>Amazon SNS (Alert notifications)</li>
-    <li>AWS IAM (Users, Roles, Policies – Basics)</li>
-    <li>Linux Fundamentals</li>
-    <li>Git & GitHub (Version Control)</li>
-  </ul>
-
-  <h3>Projects</h3>
-
-  <div class="project">
-    <h4>AWS CloudTrail – CloudWatch Security Monitoring</h4>
-    <p>
-      Implemented centralized logging and monitoring using AWS CloudTrail
-      and CloudWatch to track AWS account activity and trigger alerts for
-      security-related events.
+    <p class="tagline">
+      MCA (Cyber Security) • AI / DevOps Analyst • Backend Developer
     </p>
-    <p class="outcome">
-      Outcome: Hands-on experience with cloud security monitoring,
-      log analysis, and alert-based incident visibility.
+
+    <p class="portfolio-message">
+      This portfolio reflects my learning journey in AI/DevOps and Backend development,
+      aligned with my MCA (Cyber Security) program and real-world projects.
     </p>
-  </div>
 
-  <div class="project">
-    <h4>Secure CI/CD Pipeline (Learning Project)</h4>
-    <p>
-      Studied CI/CD pipeline concepts with a focus on automation,
-      security awareness, and DevOps best practices.
-    </p>
-    <p class="outcome">
-      Outcome: Built foundational understanding of DevOps and
-      DevSecOps workflows.
-    </p>
-  </div>
-</section>
+    <div class="track-toggle">
+      <button id="devopsBtn" class="active">AI / DevOps Track</button>
+      <button id="backendBtn">Backend Track</button>
+    </div>
+  </header>
 
-<section class="inspiration">
-  <h2>Inspired by India’s Technology Journey 🇮🇳</h2>
+  <!-- CONTENT -->
+  <main>
 
-  <p>
-    My learning mindset is shaped by India’s technology ecosystem —
-    where engineering discipline, scale, and purpose come together.
-  </p>
+    <!-- DEVOPS -->
+    <section id="devops-track" class="track visible">
+      <h2>AI / DevOps Projects</h2>
 
-  <ul>
-    <li><strong>ISRO</strong> — Reliability, precision, and mission-critical engineering</li>
-    <li><strong>India-built SaaS (Zoho-like companies)</strong> — Product-first and long-term thinking</li>
-    <li><strong>Indian IT ecosystem</strong> — Scalable systems and real-world problem solving</li>
-  </ul>
+      <div class="project-card">
+        <h3>AWS CloudTrail – CloudWatch Security Monitoring</h3>
+        <p>
+          Centralized security monitoring using AWS CloudTrail logs,
+          CloudWatch alarms and SNS alerts for threat detection.
+        </p>
+        <span class="project-tag">AWS • Security • Monitoring</span>
+      </div>
 
-  <p class="note">
-    These influences guide how I approach cloud security,
-    DevOps practices, and backend system design.
-  </p>
-</section>
+      <div class="project-card">
+        <h3>DevSecOps Pipeline with Security Scanning</h3>
+        <p>
+          CI/CD pipeline integrating security checks,
+          vulnerability scans and automated alerts.
+        </p>
+        <span class="project-tag">DevSecOps • CI/CD • Security</span>
+      </div>
+    </section>
 
-</main>
+    <!-- BACKEND -->
+    <section id="backend-track" class="track hidden">
+      <h2>Backend Projects</h2>
 
-<footer class="footer">
+      <div class="project-card">
+        <h3>REST API using Node.js & Express</h3>
+        <p>
+          Built RESTful APIs with proper routing,
+          validation and database interaction.
+        </p>
+        <span class="project-tag">Node.js • Express • API</span>
+      </div>
 
-  <div class="footer-links">
+      <div class="project-card">
+        <h3>Authentication Module</h3>
+        <p>
+          Implemented login and role-based access
+          with secure backend logic.
+        </p>
+        <span class="project-tag">Backend • Auth • Security</span>
+      </div>
+    </section>
 
-    <!-- LinkedIn -->
-    <a
-      href="https://www.linkedin.com/in/ranjan-kumar-upadhyay"
-      target="_blank"
-      aria-label="LinkedIn"
-      class="footer-icon"
-    >
-      <!-- LinkedIn SVG -->
-      <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor">
-        <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8.5h4V24h-4zM8.5 8.5h3.8v2.1h.05c.53-1 1.82-2.1 3.75-2.1 4 0 4.7 2.6 4.7 6V24h-4v-7.6c0-1.8 0-4.1-2.5-4.1s-2.9 2-2.9 4v7.7h-4z"/>
-      </svg>
-    </a>
+  </main>
 
-    <!-- GitHub -->
-    <a
-      href="https://github.com/rajankumarup56"
-      target="_blank"
-      aria-label="GitHub"
-      class="footer-icon"
-    >
-      <!-- GitHub SVG -->
-      <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor">
-        <path d="M12 .5C5.73.5.5 5.74.5 12.02c0 5.1 3.29 9.42 7.86 10.95.57.1.78-.25.78-.56v-2c-3.2.7-3.88-1.55-3.88-1.55-.53-1.34-1.29-1.7-1.29-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.1-.75.4-1.27.72-1.56-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.45.11-3.03 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.5 3.17-1.18 3.17-1.18.63 1.58.23 2.74.11 3.03.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.25 5.66.41.35.77 1.05.77 2.12v3.15c0 .31.2.67.79.56 4.56-1.53 7.85-5.85 7.85-10.95C23.5 5.74 18.27.5 12 .5z"/>
-      </svg>
-    </a>
-
-  </div>
-
-  <p class="footer-text">
-    © 2026 Ranjan Kumar Upadhyay · Built with clarity & purpose
-  </p>
-
-</footer>
-
-
-</body>
-</html>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+      <a href="https://github.com" target="_blank">GitHub</a>
+    </div>
+    <p>© 2026 Ranjan | Built with clarity & purpose</p>
+  </footer>
