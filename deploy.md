@@ -2,7 +2,7 @@
 
 This document explains how this portfolio is deployed and how updates are managed.
 
----
+-----
 
 ## 📁 Repository Structure
 - Root contains `index.html`
