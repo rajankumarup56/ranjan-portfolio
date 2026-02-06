@@ -1,42 +1,47 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
 }
 
 body {
-  background: #0b1220;
-  color: #ffffff;
+  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: radial-gradient(circle at top, #0b1a33, #050b17 70%);
+  color: #e6edf3;
+  line-height: 1.6;
 }
 
 /* HERO */
 .hero {
+  min-height: 100vh;
+  padding: 80px 20px 60px;
   text-align: center;
-  padding: 80px 20px;
-  background: linear-gradient(135deg, #020617, #0f172a);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .hero h1 {
-  font-size: 42px;
-  margin-bottom: 10px;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 12px;
 }
 
 .tagline {
-  font-size: 18px;
-  opacity: 0.9;
-  margin-bottom: 14px;
+  font-size: 1.1rem;
+  opacity: 0.85;
+  margin-bottom: 16px;
 }
 
 .portfolio-message {
-  max-width: 700px;
-  margin: 0 auto 30px;
-  font-size: 16px;
-  line-height: 1.6;
-  opacity: 0.85;
+  max-width: 780px;
+  margin: 0 auto 40px;
+  font-size: 1rem;
+  opacity: 0.9;
 }
 
-/* TOGGLE BUTTONS */
+/* TRACK TOGGLE */
 .track-toggle {
   display: flex;
   justify-content: center;
@@ -45,39 +50,108 @@ body {
 
 .track-toggle button {
   padding: 12px 26px;
-  border-radius: 6px;
-  border: 1px solid #38bdf8;
+  font-size: 0.95rem;
+  border-radius: 999px;
+  border: 1px solid #1f6feb;
   background: transparent;
-  color: #38bdf8;
+  color: #58a6ff;
   cursor: pointer;
-  font-size: 15px;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
+}
+
+.track-toggle button:hover {
+  background: rgba(88, 166, 255, 0.15);
 }
 
 .track-toggle button.active {
-  background: #38bdf8;
-  color: #020617;
+  background: linear-gradient(135deg, #58a6ff, #1f6feb);
+  color: #fff;
+  box-shadow: 0 8px 25px rgba(31, 111, 235, 0.35);
+}
+
+/* MAIN */
+main {
+  padding: 80px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 /* TRACK VISIBILITY */
 .track {
   display: none;
-  padding: 60px 20px;
-  text-align: center;
+  animation: fadeUp 0.5s ease forwards;
 }
 
 .track.visible {
   display: block;
 }
 
-.track.hidden {
-  display: none;
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* SECTION HEADINGS */
+.track h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.track > p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  opacity: 0.85;
+}
+
+/* PROJECT / SKILL CARDS FEEL */
+.track ul,
+.track .project {
+  margin: 0 auto 30px;
+  max-width: 900px;
+  padding: 28px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.track ul li {
+  list-style: none;
+  padding: 6px 0;
+  text-align: center;
 }
 
 /* FOOTER */
 .footer {
   text-align: center;
-  padding: 20px;
-  font-size: 14px;
-  opacity: 0.7;
+  padding: 40px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-top: 60px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.footer a {
+  color: #58a6ff;
+  margin: 0 8px;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
 }

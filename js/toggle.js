@@ -5,23 +5,17 @@ const devopsTrack = document.getElementById("devops-track");
 const backendTrack = document.getElementById("backend-track");
 
 devopsBtn.addEventListener("click", () => {
-  devopsTrack.classList.remove("hidden");
-  devopsTrack.classList.add("visible");
-
-  backendTrack.classList.remove("visible");
-  backendTrack.classList.add("hidden");
-
   devopsBtn.classList.add("active");
   backendBtn.classList.remove("active");
+
+  devopsTrack.classList.add("visible");
+  backendTrack.classList.remove("visible");
 });
 
 backendBtn.addEventListener("click", () => {
-  backendTrack.classList.remove("hidden");
-  backendTrack.classList.add("visible");
-
-  devopsTrack.classList.remove("visible");
-  devopsTrack.classList.add("hidden");
-
   backendBtn.classList.add("active");
   devopsBtn.classList.remove("active");
+
+  backendTrack.classList.add("visible");
+  devopsTrack.classList.remove("visible");
 });
