@@ -1,14 +1,19 @@
-# Deployment Guide
+# Portfolio Deployment Guide (GitHub Pages)
 
-## Option 1: GitHub Pages
-1. Push project to GitHub repository
-2. Go to Settings → Pages
-3. Select branch: main / root
-4. Save and access URL
+This document explains how this portfolio is deployed and how updates are managed.
 
-## Option 2: Netlify
-1. Login to Netlify
-2. Drag & drop project folder
-3. Done
+---
 
-No build tools required.
+## 📁 Repository Structure
+- Root contains `index.html`
+- CSS files inside `css/`
+- JavaScript inside `js/`
+- Assets inside `assets/`
+- Hosted using GitHub Pages
+
+---
+
+## 🚀 Deployment Steps
+
+1. Push all portfolio files to the GitHub repository  
+   Repo name:
