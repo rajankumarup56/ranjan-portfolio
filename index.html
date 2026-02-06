@@ -5,6 +5,7 @@
   <title>Ranjan | AI/DevOps & Backend Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- MAIN CSS -->
   <link rel="stylesheet" href="css/main.css" />
 </head>
 
@@ -12,7 +13,15 @@
 
   <!-- HERO -->
   <header class="hero">
-    <img src="assets/images/profile.png" alt="Ranjan Profile" class="profile-pic" />
+
+    <!-- PROFILE PIC -->
+    <div class="profile-pic-wrapper">
+      <img
+        src="assets/images/profile.png"
+        alt="Ranjan Profile"
+        class="profile-pic"
+      />
+    </div>
 
     <h1>Ranjan Kumar Upadhyay</h1>
 
@@ -25,16 +34,18 @@
       aligned with my MCA (Cyber Security) program and real-world projects.
     </p>
 
+    <!-- TRACK TOGGLE -->
     <div class="track-toggle">
       <button id="devopsBtn" class="active">AI / DevOps Track</button>
       <button id="backendBtn">Backend Track</button>
     </div>
+
   </header>
 
-  <!-- CONTENT -->
+  <!-- MAIN CONTENT -->
   <main>
 
-    <!-- DEVOPS -->
+    <!-- DEVOPS TRACK -->
     <section id="devops-track" class="track visible">
       <h2>AI / DevOps Projects</h2>
 
@@ -44,37 +55,37 @@
           Centralized security monitoring using AWS CloudTrail logs,
           CloudWatch alarms and SNS alerts for threat detection.
         </p>
-        <span class="project-tag">AWS • Security • Monitoring</span>
+        <span class="project-tag">AWS • CloudWatch • Security</span>
       </div>
 
       <div class="project-card">
-        <h3>DevSecOps Pipeline with Security Scanning</h3>
+        <h3>DevSecOps Pipeline with Automated Security Scanning</h3>
         <p>
-          CI/CD pipeline integrating security checks,
-          vulnerability scans and automated alerts.
+          CI/CD pipeline integrating security scans, policy checks
+          and alerting for secure deployments.
         </p>
-        <span class="project-tag">DevSecOps • CI/CD • Security</span>
+        <span class="project-tag">DevSecOps • CI/CD • Automation</span>
       </div>
     </section>
 
-    <!-- BACKEND -->
+    <!-- BACKEND TRACK -->
     <section id="backend-track" class="track hidden">
       <h2>Backend Projects</h2>
 
       <div class="project-card">
         <h3>REST API using Node.js & Express</h3>
         <p>
-          Built RESTful APIs with proper routing,
-          validation and database interaction.
+          Designed RESTful APIs with proper routing,
+          validation and secure request handling.
         </p>
-        <span class="project-tag">Node.js • Express • API</span>
+        <span class="project-tag">Node.js • Express • REST API</span>
       </div>
 
       <div class="project-card">
-        <h3>Authentication Module</h3>
+        <h3>Authentication & Authorization Module</h3>
         <p>
-          Implemented login and role-based access
-          with secure backend logic.
+          Implemented login system with role-based access
+          and backend security best practices.
         </p>
         <span class="project-tag">Backend • Auth • Security</span>
       </div>
@@ -84,9 +95,60 @@
 
   <!-- FOOTER -->
   <footer class="footer">
+
     <div class="footer-links">
-      <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
-      <a href="https://github.com" target="_blank">GitHub</a>
+      <a
+        href="https://www.linkedin.com/in/YOUR-LINKEDIN"
+        target="_blank"
+        class="footer-icon"
+      >
+        LinkedIn
+      </a>
+
+      <a
+        href="https://github.com/YOUR-GITHUB"
+        target="_blank"
+        class="footer-icon"
+      >
+        GitHub
+      </a>
     </div>
-    <p>© 2026 Ranjan | Built with clarity & purpose</p>
+
+    <p class="footer-text">
+      © 2026 Ranjan Kumar Upadhyay • Built with clarity & purpose
+    </p>
+
   </footer>
+
+  <!-- TOGGLE SCRIPT -->
+  <script>
+    const devBtn = document.getElementById("devopsBtn");
+    const backBtn = document.getElementById("backendBtn");
+    const devTrack = document.getElementById("devops-track");
+    const backTrack = document.getElementById("backend-track");
+
+    devBtn.addEventListener("click", () => {
+      devBtn.classList.add("active");
+      backBtn.classList.remove("active");
+
+      devTrack.classList.add("visible");
+      devTrack.classList.remove("hidden");
+
+      backTrack.classList.add("hidden");
+      backTrack.classList.remove("visible");
+    });
+
+    backBtn.addEventListener("click", () => {
+      backBtn.classList.add("active");
+      devBtn.classList.remove("active");
+
+      backTrack.classList.add("visible");
+      backTrack.classList.remove("hidden");
+
+      devTrack.classList.add("hidden");
+      devTrack.classList.remove("visible");
+    });
+  </script>
+
+</body>
+</html>
