@@ -55,7 +55,7 @@ The portfolio is designed with a **track-based structure**, allowing viewers to 
 🔗 **Website:**  
 https://rajankumarup56.github.io/ranjan-portfolio/
 
-----
+-----------
 
 ## 🛠 Tech Stack
 - HTML5
