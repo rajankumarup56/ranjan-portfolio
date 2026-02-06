@@ -1,187 +1,137 @@
-/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 body {
-  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background: radial-gradient(circle at top, #0b1a33, #050b17 70%);
-  color: #e6edf3;
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  color: #e5e7eb;
   line-height: 1.6;
 }
 
-/* HERO */
 .hero {
-  min-height: 100vh;
-  padding: 80px 20px 60px;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  padding: 80px 20px;
 }
 
 .hero h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 12px;
+  font-size: 2.6rem;
+  margin-bottom: 10px;
 }
 
 .tagline {
-  font-size: 1.1rem;
-  opacity: 0.85;
-  margin-bottom: 16px;
-}
-
-.portfolio-message {
-  max-width: 780px;
-  margin: 0 auto 40px;
-  font-size: 1rem;
-  opacity: 0.9;
-}
-
-/* TRACK TOGGLE */
-.track-toggle {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
+  color: #cbd5f5;
+  margin-bottom: 30px;
 }
 
 .track-toggle button {
-  padding: 12px 26px;
-  font-size: 0.95rem;
-  border-radius: 999px;
-  border: 1px solid #1f6feb;
+  padding: 10px 22px;
+  margin: 0 6px;
+  border-radius: 8px;
+  border: 1px solid #38bdf8;
   background: transparent;
-  color: #58a6ff;
+  color: #38bdf8;
   cursor: pointer;
-  transition: all 0.25s ease;
 }
 
-.track-toggle button:hover {
-  background: rgba(88, 166, 255, 0.15);
+.track-toggle .active {
+  background: #38bdf8;
+  color: #020617;
 }
 
-.track-toggle button.active {
-  background: linear-gradient(135deg, #58a6ff, #1f6feb);
-  color: #fff;
-  box-shadow: 0 8px 25px rgba(31, 111, 235, 0.35);
-}
-
-/* MAIN */
 main {
-  padding: 80px 20px;
-  max-width: 1100px;
-  margin: 0 auto;
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
 }
 
-/* TRACK VISIBILITY */
-.track {
-  display: none;
-  animation: fadeUp 0.5s ease forwards;
-}
-
-.track.visible {
-  display: block;
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(16px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* SECTION HEADINGS */
 .track h2 {
   text-align: center;
-  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #4cc9f0;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #cbd5f5;
+}
+
+h3 {
+  margin-top: 30px;
   margin-bottom: 12px;
+  color: #93c5fd;
 }
 
-.track > p {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto 40px;
-  opacity: 0.85;
-}
-
-/* PROJECT / SKILL CARDS FEEL */
-.track ul,
-.track .project {
-  margin: 0 auto 30px;
-  max-width: 900px;
-  padding: 28px;
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-}
-
-.track ul li {
+.skills {
   list-style: none;
-  padding: 6px 0;
-  text-align: center;
+  margin-left: 10px;
 }
 
-/* FOOTER */
-.footer {
+.skills li {
+  margin: 6px 0;
+}
+
+.project {
+  margin-top: 20px;
+  padding: 18px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.03);
+}
+
+.project h4 {
+  color: #67e8f9;
+  margin-bottom: 6px;
+}
+
+.outcome {
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+.inspiration {
+  margin-top: 80px;
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 40px;
+}
+
+.inspiration h2 {
+  color: #4cc9f0;
+  margin-bottom: 20px;
+}
+
+.inspiration ul {
+  list-style: none;
+  margin: 20px 0;
+}
+
+.inspiration li {
+  margin: 10px 0;
+}
+
+.note {
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+footer {
   text-align: center;
   padding: 40px 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
   margin-top: 60px;
-  font-size: 0.9rem;
-  opacity: 0.8;
+  border-top: 1px solid rgba(255,255,255,0.1);
 }
 
-.footer a {
-  color: #58a6ff;
-  margin: 0 8px;
+.footer-note {
+  font-size: 0.85rem;
+  color: #9ca3af;
+  margin: 8px 0;
+}
+
+.links a {
+  color: #38bdf8;
   text-decoration: none;
-}
-
-.footer a:hover {
-  text-decoration: underline;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-}
-
-/* ===== SECTION POLISH ===== */
-
-.track {
-  max-width: 1000px;
-  margin: 60px auto;
-  padding: 50px 40px;
-  background: rgba(255, 255, 255, 0.04);
-  border-radius: 14px;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
-}
-
-/* Headings spacing */
-.track h2,
-.track h3 {
-  margin-bottom: 16px;
-  letter-spacing: 0.5px;
-}
-
-/* ===== PROJECT POLISH ===== */
-
-.track strong {
-  color: #4fc3f7;
-  font-weight: 600;
-}
-
-.track p {
-  line-height: 1.7;
-  margin-bottom: 14px;
+  margin: 0 6px;
 }
