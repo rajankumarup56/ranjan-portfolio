@@ -2,39 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Ranjan | AI/DevOps & Backend Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- MAIN CSS -->
+  <title>Ranjan Kumar Upadhyay | DevOps & Backend</title>
   <link rel="stylesheet" href="css/main.css" />
 </head>
-
 <body>
 
-  <!-- HERO -->
+  <!-- HERO SECTION -->
   <header class="hero">
 
-    <!-- PROFILE PIC -->
     <div class="profile-pic-wrapper">
-      <img
-        src="assets/images/profile.png"
-        alt="Ranjan Profile"
-        class="profile-pic"
-      />
+      <img src="assets/profile.png" alt="Ranjan Kumar Upadhyay" class="profile-pic">
     </div>
 
     <h1>Ranjan Kumar Upadhyay</h1>
-
     <p class="tagline">
-      MCA (Cyber Security) • AI / DevOps Analyst • Backend Developer
+      DevOps • Cloud Monitoring • Backend Development
     </p>
 
     <p class="portfolio-message">
-      This portfolio reflects my learning journey in AI/DevOps and Backend development,
-      aligned with my MCA (Cyber Security) program and real-world projects.
+      This portfolio demonstrates my practical understanding of cloud monitoring,
+      DevOps security visibility, and backend fundamentals built through hands-on
+      AWS labs and structured learning aligned with my MCA (Cyber Security) program.
     </p>
 
-    <!-- TRACK TOGGLE -->
     <div class="track-toggle">
       <button id="devopsBtn" class="active">AI / DevOps Track</button>
       <button id="backendBtn">Backend Track</button>
@@ -42,113 +33,97 @@
 
   </header>
 
-  <!-- MAIN CONTENT -->
   <main>
 
     <!-- DEVOPS TRACK -->
     <section id="devops-track" class="track visible">
+
       <h2>AI / DevOps Projects</h2>
 
       <div class="project-card">
         <h3>AWS CloudTrail – CloudWatch Security Monitoring</h3>
         <p>
-          Centralized security monitoring using AWS CloudTrail logs,
-          CloudWatch alarms and SNS alerts for threat detection.
+          Configured AWS CloudTrail to capture account-level activity logs and
+          integrated them with CloudWatch Log Groups. Created metric filters
+          and CloudWatch Alarms to detect suspicious API calls and trigger SNS
+          notifications for real-time security visibility.
         </p>
-        <span class="project-tag">AWS • CloudWatch • Security</span>
+        <span class="project-tag">
+          AWS • CloudTrail • CloudWatch • SNS • Security Monitoring
+        </span>
       </div>
 
       <div class="project-card">
-        <h3>DevSecOps Pipeline with Automated Security Scanning</h3>
+        <h3>DevSecOps Pipeline Awareness Project</h3>
         <p>
-          CI/CD pipeline integrating security scans, policy checks
-          and alerting for secure deployments.
+          Studied CI/CD workflow and integrated security awareness into pipeline
+          stages. Explored automated scanning concepts, policy validation,
+          and secure deployment practices aligned with DevSecOps principles.
         </p>
-        <span class="project-tag">DevSecOps • CI/CD • Automation</span>
+        <span class="project-tag">
+          DevSecOps • CI/CD • Secure Deployment • Automation
+        </span>
       </div>
+
     </section>
 
     <!-- BACKEND TRACK -->
     <section id="backend-track" class="track hidden">
+
       <h2>Backend Projects</h2>
 
       <div class="project-card">
         <h3>REST API using Node.js & Express</h3>
         <p>
-          Designed RESTful APIs with proper routing,
-          validation and secure request handling.
+          Designed and structured RESTful APIs with modular routing, request
+          validation, and error handling. Implemented scalable backend folder
+          structure following separation of concerns principles.
         </p>
-        <span class="project-tag">Node.js • Express • REST API</span>
+        <span class="project-tag">
+          Node.js • Express • REST API • Backend Architecture
+        </span>
       </div>
 
       <div class="project-card">
         <h3>Authentication & Authorization Module</h3>
         <p>
-          Implemented login system with role-based access
-          and backend security best practices.
+          Implemented JWT-based authentication and role-based access control.
+          Applied backend security best practices to protect API endpoints
+          and manage user sessions securely.
         </p>
-        <span class="project-tag">Backend • Auth • Security</span>
+        <span class="project-tag">
+          JWT • Auth • Role-Based Access • Backend Security
+        </span>
       </div>
+
+    </section>
+
+    <!-- PROFESSIONAL FOCUS -->
+    <section class="experience-note">
+      <h2>Professional Focus</h2>
+      <p>
+        I am currently focused on building strong fundamentals in Cloud Monitoring,
+        Security Visibility, DevOps practices, and Backend System Design.
+        My goal is to contribute to entry-level DevOps or Backend roles
+        with a security-first mindset.
+      </p>
     </section>
 
   </main>
 
   <!-- FOOTER -->
   <footer class="footer">
-
     <div class="footer-links">
-      <a
-        href="https://www.linkedin.com/in/YOUR-LINKEDIN"
-        target="_blank"
-        class="footer-icon"
-      >
-        LinkedIn
-      </a>
-
-      <a
-        href="https://github.com/YOUR-GITHUB"
-        target="_blank"
-        class="footer-icon"
-      >
-        GitHub
-      </a>
+      <a href="https://github.com/rajankumarup56" target="_blank" class="footer-icon">GitHub</a>
+      <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" class="footer-icon">LinkedIn</a>
     </div>
 
     <p class="footer-text">
-      © 2026 Ranjan Kumar Upadhyay • Built with clarity & purpose
+      © 2026 Ranjan Kumar Upadhyay • Built with clarity & continuous learning
     </p>
-
   </footer>
 
-  <!-- TOGGLE SCRIPT -->
-  <script>
-    const devBtn = document.getElementById("devopsBtn");
-    const backBtn = document.getElementById("backendBtn");
-    const devTrack = document.getElementById("devops-track");
-    const backTrack = document.getElementById("backend-track");
-
-    devBtn.addEventListener("click", () => {
-      devBtn.classList.add("active");
-      backBtn.classList.remove("active");
-
-      devTrack.classList.add("visible");
-      devTrack.classList.remove("hidden");
-
-      backTrack.classList.add("hidden");
-      backTrack.classList.remove("visible");
-    });
-
-    backBtn.addEventListener("click", () => {
-      backBtn.classList.add("active");
-      devBtn.classList.remove("active");
-
-      backTrack.classList.add("visible");
-      backTrack.classList.remove("hidden");
-
-      devTrack.classList.add("hidden");
-      devTrack.classList.remove("visible");
-    });
-  </script>
+  <script src="js/toggle.js"></script>
 
 </body>
 </html>
