@@ -97,8 +97,7 @@ This portfolio is created to:
 ## 📫 Connect With Me
 
 - **GitHub:** https://github.com/rajankumarup56  
-- **LinkedIn:** (add your LinkedIn profile link)
-
+- **LinkedIn:** www.linkedin.com/in/ranjan-kumar-upadhyay-18733039a
 ---
 
 © 2026 Ranjan Kumar Upadhyay  
