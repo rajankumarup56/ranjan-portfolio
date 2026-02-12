@@ -2,128 +2,192 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <title>Ranjan | DevOps & Backend Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ranjan Kumar Upadhyay | DevOps & Backend</title>
+
+  <!-- MAIN CSS -->
   <link rel="stylesheet" href="css/main.css" />
 </head>
+
 <body>
 
   <!-- HERO SECTION -->
   <header class="hero">
 
     <div class="profile-pic-wrapper">
-      <img src="assets/profile.png" alt="Ranjan Kumar Upadhyay" class="profile-pic">
+      <img
+        src="assets/images/profile.png"
+        alt="Ranjan Profile"
+        class="profile-pic"
+      />
     </div>
 
     <h1>Ranjan Kumar Upadhyay</h1>
+
     <p class="tagline">
-      DevOps • Cloud Monitoring • Backend Development
+      MCA (Cyber Security) • DevOps Engineer • Backend Developer
     </p>
 
     <p class="portfolio-message">
-      This portfolio demonstrates my practical understanding of cloud monitoring,
-      DevOps security visibility, and backend fundamentals built through hands-on
-      AWS labs and structured learning aligned with my MCA (Cyber Security) program.
+      Entry-level DevOps & Backend Engineer focused on Cloud Monitoring,
+      Security Visibility, CI/CD automation and scalable backend systems.
     </p>
 
+    <!-- TRACK TOGGLE -->
     <div class="track-toggle">
-      <button id="devopsBtn" class="active">AI / DevOps Track</button>
+      <button id="devopsBtn" class="active">DevOps Track</button>
       <button id="backendBtn">Backend Track</button>
+    </div>
+
+    <!-- CTA BUTTONS -->
+    <div class="cta-buttons">
+      <a href="assets/resume.pdf" target="_blank" class="btn-primary">View Resume</a>
+      <a href="https://github.com/rajankumarup56" target="_blank" class="btn-secondary">GitHub</a>
     </div>
 
   </header>
 
+  <!-- MAIN CONTENT -->
   <main>
 
     <!-- DEVOPS TRACK -->
     <section id="devops-track" class="track visible">
-
-      <h2>AI / DevOps Projects</h2>
+      <h2>DevOps Projects</h2>
 
       <div class="project-card">
         <h3>AWS CloudTrail – CloudWatch Security Monitoring</h3>
         <p>
-          Configured AWS CloudTrail to capture account-level activity logs and
-          integrated them with CloudWatch Log Groups. Created metric filters
-          and CloudWatch Alarms to detect suspicious API calls and trigger SNS
-          notifications for real-time security visibility.
+          Implemented centralized AWS logging using CloudTrail and CloudWatch.
+          Created metric filters and alarms integrated with SNS for real-time
+          security alerting and monitoring visibility.
         </p>
-        <span class="project-tag">
-          AWS • CloudTrail • CloudWatch • SNS • Security Monitoring
-        </span>
+        <span class="project-tag">AWS • CloudTrail • CloudWatch • SNS</span>
+        <br />
+        <a href="https://github.com/rajankumarup56" target="_blank" class="project-link">
+          View Project →
+        </a>
       </div>
 
       <div class="project-card">
-        <h3>DevSecOps Pipeline Awareness Project</h3>
+        <h3>CI/CD Automation with Infrastructure Provisioning</h3>
         <p>
-          Studied CI/CD workflow and integrated security awareness into pipeline
-          stages. Explored automated scanning concepts, policy validation,
-          and secure deployment practices aligned with DevSecOps principles.
+          Designed Jenkins pipeline for automated build and deployment.
+          Provisioned AWS infrastructure using Terraform with modular configuration.
         </p>
-        <span class="project-tag">
-          DevSecOps • CI/CD • Secure Deployment • Automation
-        </span>
+        <span class="project-tag">CI/CD • Jenkins • Terraform • Automation</span>
+        <br />
+        <a href="https://github.com/rajankumarup56" target="_blank" class="project-link">
+          View Project →
+        </a>
       </div>
-
     </section>
 
     <!-- BACKEND TRACK -->
     <section id="backend-track" class="track hidden">
-
       <h2>Backend Projects</h2>
 
       <div class="project-card">
-        <h3>REST API using Node.js & Express</h3>
+        <h3>Secure Production-Ready REST API</h3>
         <p>
-          Designed and structured RESTful APIs with modular routing, request
-          validation, and error handling. Implemented scalable backend folder
-          structure following separation of concerns principles.
+          Developed RESTful APIs using Node.js and Express.
+          Implemented JWT authentication, role-based access control,
+          and structured relational database design.
         </p>
-        <span class="project-tag">
-          Node.js • Express • REST API • Backend Architecture
-        </span>
+        <span class="project-tag">Node.js • Express • JWT • MySQL</span>
+        <br />
+        <a href="https://github.com/rajankumarup56" target="_blank" class="project-link">
+          View Project →
+        </a>
       </div>
 
       <div class="project-card">
-        <h3>Authentication & Authorization Module</h3>
+        <h3>Role-Based Task Management API</h3>
         <p>
-          Implemented JWT-based authentication and role-based access control.
-          Applied backend security best practices to protect API endpoints
-          and manage user sessions securely.
+          Built backend system with role-based access control,
+          request logging, rate limiting and Dockerized deployment setup.
         </p>
-        <span class="project-tag">
-          JWT • Auth • Role-Based Access • Backend Security
-        </span>
+        <span class="project-tag">Backend • Auth • Docker • Security</span>
+        <br />
+        <a href="https://github.com/rajankumarup56" target="_blank" class="project-link">
+          View Project →
+        </a>
       </div>
-
     </section>
 
-    <!-- PROFESSIONAL FOCUS -->
-    <section class="experience-note">
-      <h2>Professional Focus</h2>
-      <p>
-        I am currently focused on building strong fundamentals in Cloud Monitoring,
-        Security Visibility, DevOps practices, and Backend System Design.
-        My goal is to contribute to entry-level DevOps or Backend roles
-        with a security-first mindset.
-      </p>
+    <!-- TECH STACK -->
+    <section class="tech-stack">
+      <h2>Tech Stack Snapshot</h2>
+
+      <div class="stack-grid">
+        <div>AWS (CloudTrail, CloudWatch, IAM, SNS, KMS)</div>
+        <div>Terraform • Jenkins • Git • GitHub</div>
+        <div>Linux • CI/CD • Monitoring</div>
+        <div>Node.js • Express • MySQL</div>
+        <div>Docker • JWT • REST APIs</div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section">
+      <h2>Let’s Connect</h2>
+      <p>I am open to entry-level DevOps or Backend opportunities.</p>
+      <a href="mailto:rajankumarup56@zohomail.in" class="btn-primary">Email Me</a>
     </section>
 
   </main>
 
   <!-- FOOTER -->
   <footer class="footer">
+
     <div class="footer-links">
-      <a href="https://github.com/rajankumarup56" target="_blank" class="footer-icon">GitHub</a>
-      <a href="www.linkedin.com/in/ranjan-kumar-upadhyay-18733039a" target="_blank" class="footer-icon">LinkedIn</a>
+      <a
+        href="https://www.linkedin.com/in/YOUR-LINKEDIN"
+        target="_blank"
+        class="footer-icon"
+      >
+        LinkedIn
+      </a>
+
+      <a
+        href="https://github.com/rajankumarup56"
+        target="_blank"
+        class="footer-icon"
+      >
+        GitHub
+      </a>
     </div>
 
     <p class="footer-text">
       © 2026 Ranjan Kumar Upadhyay • Built with clarity & continuous learning
     </p>
+
   </footer>
 
-  <script src="js/toggle.js"></script>
+  <!-- TOGGLE SCRIPT -->
+  <script>
+    const devBtn = document.getElementById("devopsBtn");
+    const backBtn = document.getElementById("backendBtn");
+    const devTrack = document.getElementById("devops-track");
+    const backTrack = document.getElementById("backend-track");
+
+    devBtn.onclick = () => {
+      devBtn.classList.add("active");
+      backBtn.classList.remove("active");
+      devTrack.classList.add("visible");
+      devTrack.classList.remove("hidden");
+      backTrack.classList.add("hidden");
+      backTrack.classList.remove("visible");
+    };
+
+    backBtn.onclick = () => {
+      backBtn.classList.add("active");
+      devBtn.classList.remove("active");
+      backTrack.classList.add("visible");
+      backTrack.classList.remove("hidden");
+      devTrack.classList.add("hidden");
+      devTrack.classList.remove("visible");
+    };
+  </script>
 
 </body>
 </html>
