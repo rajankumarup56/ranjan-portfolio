@@ -1,430 +1,61 @@
-/* =================================
-   GLOBAL RESET
-================================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  color: #e5e7eb;
-  line-height: 1.6;
-
-  background: radial-gradient(
-      circle at 20% 20%,
-      rgba(56, 189, 248, 0.06),
-      transparent 40%
-    ),
-    radial-gradient(
-      circle at 80% 0%,
-      rgba(59, 130, 246, 0.05),
-      transparent 45%
-    ),
-    #020617;
+margin: 0;
+font-family: 'Segoe UI';
+background: linear-gradient(135deg, #0f172a, #020617);
+color: white;
 }
 
-/* =================================
-   HERO SECTION
-================================= */
 .hero {
-  text-align: center;
-  padding: 100px 20px 80px;
-  background: radial-gradient(
-    circle at top,
-    rgba(56, 189, 248, 0.18),
-    transparent 65%
-  );
+text-align: center;
+padding: 80px 20px;
 }
 
 .hero h1 {
-  font-size: 2.8rem;
-  font-weight: 700;
-  letter-spacing: 0.5px;
+font-size: 40px;
 }
 
-.tagline {
-  margin-top: 14px;
-  font-size: 1.05rem;
-  color: #cbd5f5;
-}
-
-.portfolio-message {
-  margin-top: 18px;
-  font-size: 0.95rem;
-  color: #94a3b8;
-  max-width: 760px;
-  margin-inline: auto;
-}
-
-/* =================================
-   PROFILE IMAGE
-================================= */
-.profile-pic-wrapper {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 24px;
-}
-
-.profile-pic {
-  width: 160px;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid rgba(56, 189, 248, 0.8);
-  background: #020617;
-  animation: pulseGlow 3.5s infinite ease-in-out;
-}
-
-@keyframes pulseGlow {
-  0% {
-    box-shadow: 0 0 20px rgba(56, 189, 248, 0.25);
-  }
-  50% {
-    box-shadow: 0 0 45px rgba(56, 189, 248, 0.45);
-  }
-  100% {
-    box-shadow: 0 0 20px rgba(56, 189, 248, 0.25);
-  }
-}
-
-
-/* =================================
-   HERO ACTIONS (Resume / GitHub / LinkedIn)
-================================= */
-.hero-actions {
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
-  gap: 18px;
-  flex-wrap: wrap;
-}
-
-.btn-primary,
-.btn-secondary {
-  padding: 11px 24px;
-  border-radius: 999px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
-}
-
-.btn-primary {
-  background: #38bdf8;
-  color: #020617;
-}
-
-.btn-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 25px rgba(56, 189, 248, 0.4);
-}
-
-.btn-secondary {
-  border: 1px solid rgba(56, 189, 248, 0.6);
-  color: #7dd3fc;
-}
-
-.btn-secondary:hover {
-  background: rgba(56, 189, 248, 0.12);
-  transform: translateY(-3px);
-}
-
-/* =================================
-   TRACK TOGGLE
-================================= */
-.track-toggle {
-  margin-top: 45px;
-}
-
-.track-toggle button {
-  padding: 11px 26px;
-  margin: 0 8px;
-  border-radius: 999px;
-  border: 1px solid rgba(56, 189, 248, 0.6);
-  background: rgba(15, 23, 42, 0.65);
-  color: #7dd3fc;
-  font-size: 0.95rem;
-  cursor: pointer;
-  transition: all 0.25s ease;
-}
-
-.track-toggle button:hover {
-  background: rgba(56, 189, 248, 0.18);
-  transform: translateY(-2px);
-}
-
-.track-toggle .active {
-  background: #38bdf8;
-  color: #020617;
-  box-shadow: 0 0 18px rgba(56, 189, 248, 0.45);
-}
-
-/* =================================
-   MAIN LAYOUT
-================================= */
-main {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 70px 20px;
+.btn {
+display: inline-block;
+margin-top: 15px;
+padding: 10px 20px;
+background: #38bdf8;
+color: black;
+text-decoration: none;
+border-radius: 8px;
 }
 
 section {
-  margin-bottom: 80px;
+padding: 40px;
+max-width: 900px;
+margin: auto;
 }
 
 h2 {
-  font-size: 1.9rem;
-  margin-bottom: 20px;
-  color: #e2e8f0;
+border-bottom: 2px solid #38bdf8;
+margin-bottom: 20px;
 }
 
-/* =================================
-   TRACK VISIBILITY
-================================= */
-.track.hidden {
-  display: none;
+.skill-box span {
+display: inline-block;
+background: #1e293b;
+padding: 8px 12px;
+margin: 5px;
+border-radius: 6px;
 }
 
-.track.visible {
-  display: block;
+.card {
+background: #1e293b;
+padding: 20px;
+margin: 15px 0;
+border-radius: 10px;
+transition: transform 0.3s;
 }
 
-/* =================================
-   SKILLS GRID
-================================= */
-.skills {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 14px;
-  margin-top: 20px;
+.card:hover {
+transform: scale(1.05);
 }
 
-.skills li {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 14px 16px;
-  border-radius: 10px;
-  font-size: 0.95rem;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  transition: all 0.3s ease;
+.card a {
+color: #38bdf8;
+text-decoration: none;
 }
-
-.skills li:hover {
-  border-color: rgba(56, 189, 248, 0.4);
-  transform: translateY(-3px);
-}
-
-/* =================================
-   PROJECT CARDS
-================================= */
-.project-card {
-  background: linear-gradient(180deg, #020617, #020617);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 16px;
-  padding: 24px;
-  margin-bottom: 28px;
-  transition: all 0.35s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.project-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(56, 189, 248, 0.15),
-    transparent
-  );
-  transition: all 0.6s ease;
-}
-
-.project-card:hover::before {
-  left: 100%;
-}
-
-.project-card:hover {
-  transform: translateY(-8px);
-  border-color: rgba(56, 189, 248, 0.5);
-  box-shadow:
-    0 20px 40px rgba(0, 0, 0, 0.6),
-    0 0 18px rgba(56, 189, 248, 0.15);
-}
-
-.project-card h3 {
-  margin-bottom: 8px;
-  color: #f8fafc;
-}
-
-.project-card p {
-  color: #94a3b8;
-  font-size: 0.95rem;
-}
-
-.project-tag {
-  display: inline-block;
-  margin-top: 12px;
-  font-size: 0.75rem;
-  padding: 6px 12px;
-  border-radius: 999px;
-  background: rgba(56, 189, 248, 0.12);
-  color: #38bdf8;
-}
-
-/* =================================
-   TECH STACK
-================================= */
-.tech-stack {
-  margin-top: 70px;
-}
-
-.stack-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 14px;
-  margin-top: 20px;
-}
-
-.stack-grid div {
-  background: rgba(255,255,255,0.05);
-  padding: 14px;
-  border-radius: 10px;
-  transition: all 0.3s ease;
-}
-
-.stack-grid div:hover {
-  border: 1px solid rgba(56, 189, 248, 0.4);
-  transform: translateY(-3px);
-}
-
-/* =================================
-   CONTACT SECTION
-================================= */
-.contact-section {
-  margin-top: 90px;
-  text-align: center;
-}
-
-/* =================================
-   FOOTER
-================================= */
-footer {
-  margin-top: 100px;
-  padding: 30px 20px;
-  text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.footer-links {
-  display: flex;
-  justify-content: center;
-  gap: 26px;
-  margin-bottom: 14px;
-}
-
-.footer-icon {
-  color: #94a3b8;
-  transition: all 0.3s ease;
-}
-
-.footer-icon:hover {
-  color: #38bdf8;
-  transform: translateY(-3px);
-}
-
-.footer-text {
-  font-size: 0.9rem;
-  color: #64748b;
-}
-/* ================================
-   PROFESSIONAL ACTION PANEL
-================================ */
-
-.action-panel {
-  margin-top: 35px;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.action-card {
-  background: linear-gradient(
-    145deg,
-    rgba(255,255,255,0.07),
-    rgba(255,255,255,0.02)
-  );
-  border: 1px solid rgba(255,255,255,0.08);
-  padding: 18px 28px;
-  border-radius: 16px;
-  text-decoration: none;
-  min-width: 170px;
-  transition: all 0.35s ease;
-  backdrop-filter: blur(10px);
-}
-
-.action-card:hover {
-  transform: translateY(-8px);
-  border-color: rgba(56,189,248,0.6);
-  box-shadow:
-    0 20px 40px rgba(0,0,0,0.6),
-    0 0 18px rgba(56,189,248,0.25);
-}
-
-.action-title {
-  display: block;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #e5e7eb;
-}
-
-.action-sub {
-  display: block;
-  margin-top: 4px;
-  font-size: 0.8rem;
-  color: #94a3b8;
-}
-.hero-content {
-  animation: fadeUp 1.2s ease forwards;
-  opacity: 0;
-  transform: translateY(20px);
-}
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.action-card {
-  animation: cardFade 1s ease forwards;
-  opacity: 0;
-  transform: translateY(25px);
-}
-
-.action-card:nth-child(1) {
-  animation-delay: 0.3s;
-}
-.action-card:nth-child(2) {
-  animation-delay: 0.5s;
-}
-.action-card:nth-child(3) {
-  animation-delay: 0.7s;
-}
-
-@keyframes cardFade {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
-
