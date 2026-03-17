@@ -1,6 +1,6 @@
-# Ranjan Kumar Upadhyay - DevOps Portfolio
+# 🚀 Ranjan Kumar Upadhyay - DevOps Portfolio
 
-🔹 DevOps & Cloud Enthusiast showcasing real-world AWS projects and cloud infrastructure skills.
+Welcome to my personal portfolio website showcasing my DevOps & Cloud projects.
 
 ---
 
@@ -10,51 +10,63 @@
 
 ---
 
-## 🚀 Featured Projects
+## 👨‍💻 About Me
 
-### AWS Highly Available Web Architecture
+I am a DevOps & Cloud enthusiast with hands-on experience in building scalable, secure, and automated cloud infrastructure on AWS.
 
-* ALB, Auto Scaling, EC2, RDS
-* High availability design
-* Monitoring with CloudWatch
-
-### Cloud Security Monitoring
-
-* CloudTrail logging
-* CloudWatch alarms
-* SNS alerts
-
-### Secure CI/CD DevSecOps Pipeline
-
-* CI/CD automation
-* Security integration
-
-### AWS Secure Infrastructure
-
-* IAM policies
-* Network security
-
-### Network Security Lab
-
-* Log analysis
-* Threat detection
+I focus on:
+- Cloud Architecture
+- CI/CD Automation
+- Monitoring & Logging
+- Security Best Practices
 
 ---
 
 ## 🛠 Tech Stack
 
-HTML
-CSS
-JavaScript
-AWS
-DevOps
+- HTML
+- CSS
+- JavaScript
+- GitHub Pages
 
 ---
 
-## 📬 Contact
+## 🚀 Featured Projects
 
-LinkedIn
-https://linkedin.com/in/ranjan-kumar-upadhyay
+### 🔹 AWS Highly Available Web Architecture
+- Load Balancer + Auto Scaling + EC2 + RDS
+- CloudWatch Monitoring + CloudTrail + Athena
 
-GitHub
-https://github.com/rajankumarup56
+### 🔹 Cloud Security Monitoring on AWS
+- CloudTrail logging
+- Metric Filters
+- CloudWatch Alarms
+- SNS Alerts
+
+### 🔹 Secure CI/CD DevSecOps Pipeline
+- CI/CD automation
+- Security integration
+- DevOps workflow
+
+---
+
+## 📄 Resume
+
+👉 Download Resume: [resume.pdf](./resume.pdf)
+
+---
+
+## 📦 Deployment
+
+See [deploy.md](./deploy.md) for deployment steps.
+
+---
+
+## 📬 Connect With Me
+
+- LinkedIn: https://linkedin.com/in/ranjan-kumar-upadhyay  
+- GitHub: https://github.com/rajankumarup56  
+
+---
+
+⭐ Actively building and learning DevOps & Cloud technologies.
