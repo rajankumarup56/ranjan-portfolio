@@ -1,56 +1,44 @@
 body {
-margin: 0;
-font-family: system-ui;
-background: #0f172a;
-color: white;
+  margin: 0;
+  font-family: Arial;
+  background: #0f172a;
+  color: white;
 }
 
-.hero {
-text-align: center;
-padding: 70px;
+header {
+  text-align: center;
+  padding: 50px;
+  background: linear-gradient(135deg, #1e293b, #0f172a);
 }
 
 .btn {
-background: #38bdf8;
-padding: 10px 20px;
-text-decoration: none;
-border-radius: 6px;
-color: black;
+  display: inline-block;
+  padding: 10px 20px;
+  background: #22c55e;
+  color: black;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-top: 10px;
 }
 
 section {
-max-width: 900px;
-margin: auto;
-padding: 30px;
+  padding: 40px;
 }
 
-.skills-grid span {
-display: inline-block;
-margin: 5px;
-padding: 8px 12px;
-background: #1e293b;
-border-radius: 5px;
+.projects {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .card {
-background: #1e293b;
-padding: 20px;
-margin: 10px 0;
-border-radius: 8px;
-transition: 0.3s;
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  transition: transform 0.3s;
 }
 
 .card:hover {
-transform: translateY(-5px);
-}
-
-/* fade animation */
-.fade-in {
-opacity: 0;
-transform: translateY(20px);
-}
-.fade-in.show {
-opacity: 1;
-transform: translateY(0);
-transition: 0.6s ease;
+  transform: translateY(-10px);
 }
