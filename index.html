@@ -1,214 +1,66 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Ranjan | DevOps & Backend Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- MAIN CSS -->
-  <link rel="stylesheet" href="css/main.css" />
+  <meta charset="UTF-8">
+  <title>Ranjan | DevOps Engineer</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <!-- HERO SECTION -->
-<!-- HERO SECTION -->
 <header class="hero">
-
-  <div class="hero-content">
-
-    <div class="profile-pic-wrapper">
-      <img
-        src="assets/images/profile.png"
-        alt="Ranjan Profile"
-        class="profile-pic"
-      />
-    </div>
-
-    <h1>Ranjan Kumar Upadhyay</h1>
-
-    <p class="tagline">
-      MCA (Cyber Security) • DevOps Engineer • Backend Developer
-    </p>
-
-    <p class="portfolio-message">
-      Focused on Cloud Monitoring, Security Visibility, CI/CD automation
-      and scalable backend systems.
-    </p>
-
-    <!-- PROFESSIONAL ACTION PANEL -->
-    <div class="action-panel">
-
-      <a href="assets/Ranjan_Resume.pdf" target="_blank" class="action-card">
-        <span class="action-title">Resume</span>
-        <span class="action-sub">View PDF</span>
-      </a>
-
-      <a href="https://github.com/rajankumarup56" target="_blank" class="action-card">
-        <span class="action-title">GitHub</span>
-        <span class="action-sub">Projects & Code</span>
-      </a>
-
-      <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" class="action-card">
-        <span class="action-title">LinkedIn</span>
-        <span class="action-sub">Professional Profile</span>
-      </a>
-
-    </div>
-
-  </div>
-
-  <!-- TRACK TOGGLE -->
-  <div class="track-toggle">
-    <button id="devopsBtn" class="active">DevOps Track</button>
-    <button id="backendBtn">Backend Track</button>
-  </div>
-
+  <h1>Ranjan Kumar Upadhyay</h1>
+  <p>🚀 DevOps & Cloud Engineer</p>
+  <a href="https://github.com/rajankumarup56" class="btn">View GitHub</a>
 </header>
 
+<section class="about">
+  <h2>About Me</h2>
+  <p>
+    I design scalable, secure and highly available cloud infrastructure using AWS and modern DevOps practices.
+  </p>
+</section>
 
+<section class="skills">
+  <h2>Skills</h2>
+  <div class="skill-box">
+    <span>AWS</span>
+    <span>CI/CD</span>
+    <span>Linux</span>
+    <span>Bash</span>
+    <span>Monitoring</span>
+  </div>
+</section>
 
-  <!-- MAIN CONTENT -->
-  <main>
+<section class="projects">
+  <h2>Projects</h2>
 
-    <!-- DEVOPS TRACK -->
-    <section id="devops-track" class="track visible">
-      <h2>DevOps Projects</h2>
+  <div class="card">
+    <h3>AWS Highly Available Architecture</h3>
+    <p>ALB + Auto Scaling + EC2 + RDS</p>
+    <a href="https://github.com/rajankumarup56/aws-highly-available-web-architecture">View</a>
+  </div>
 
-      <div class="project-card">
-        <h3>AWS CloudTrail – CloudWatch Security Monitoring</h3>
-        <p>
-          Implemented centralized AWS logging using CloudTrail and CloudWatch.
-          Created metric filters and alarms integrated with SNS for real-time
-          security alerting and monitoring visibility.
-        </p>
-        <span class="project-tag">AWS • CloudTrail • CloudWatch • SNS</span>
-        <br />
-        <a href="https://github.com/rajankumarup56" target="_blank" class="project-link">
-          View Project →
-        </a>
-      </div>
+  <div class="card">
+    <h3>Cloud Security Monitoring</h3>
+    <p>CloudTrail + CloudWatch + SNS</p>
+    <a href="https://github.com/rajankumarup56/cloud-security-monitoring-aws">View</a>
+  </div>
 
-      <div class="project-card">
-        <h3>CI/CD Automation with Infrastructure Provisioning</h3>
-        <p>
-          Designed Jenkins pipeline for automated build and deployment.
-          Provisioned AWS infrastructure using Terraform with modular configuration.
-        </p>
-        <span class="project-tag">CI/CD • Jenkins • Terraform • Automation</span>
-        <br />
-        <a href="https://github.com/rajankumarup56" target="_blank" class="project-link">
-          View Project →
-        </a>
-      </div>
-    </section>
+  <div class="card">
+    <h3>DevSecOps Pipeline</h3>
+    <p>Secure CI/CD implementation</p>
+    <a href="https://github.com/rajankumarup56/secure-cicd-devsecops-pipeline">View</a>
+  </div>
 
-    <!-- BACKEND TRACK -->
-    <section id="backend-track" class="track hidden">
-      <h2>Backend Projects</h2>
+</section>
 
-      <div class="project-card">
-        <h3>Secure Production-Ready REST API</h3>
-        <p>
-          Developed RESTful APIs using Node.js and Express.
-          Implemented JWT authentication, role-based access control,
-          and structured relational database design.
-        </p>
-        <span class="project-tag">Node.js • Express • JWT • MySQL</span>
-        <br />
-        <a href="https://github.com/rajankumarup56" target="_blank" class="project-link">
-          View Project →
-        </a>
-      </div>
+<section class="contact">
+  <h2>Contact</h2>
+  <p>LinkedIn: https://linkedin.com/in/ranjan-kumar-upadhyay</p>
+</section>
 
-      <div class="project-card">
-        <h3>Role-Based Task Management API</h3>
-        <p>
-          Built backend system with role-based access control,
-          request logging, rate limiting and Dockerized deployment setup.
-        </p>
-        <span class="project-tag">Backend • Auth • Docker • Security</span>
-        <br />
-        <a href="https://github.com/rajankumarup56" target="_blank" class="project-link">
-          View Project →
-        </a>
-      </div>
-    </section>
-
-    <!-- TECH STACK -->
-    <section class="tech-stack">
-      <h2>Tech Stack Snapshot</h2>
-
-      <div class="stack-grid">
-        <div>AWS (CloudTrail, CloudWatch, IAM, SNS, KMS)</div>
-        <div>Terraform • Jenkins • Git • GitHub</div>
-        <div>Linux • CI/CD • Monitoring</div>
-        <div>Node.js • Express • MySQL</div>
-        <div>Docker • JWT • REST APIs</div>
-      </div>
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <section class="contact-section">
-      <h2>Let’s Connect</h2>
-      <p>I am open to entry-level DevOps or Backend opportunities.</p>
-      <a href="mailto:rajankumarup56@zohomail.in" class="btn-primary">Email Me</a>
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-
-    <div class="footer-links">
-      <a
-        href="https://www.linkedin.com/in/YOUR-LINKEDIN"
-        target="_blank"
-        class="footer-icon"
-      >
-        LinkedIn
-      </a>
-
-      <a
-        href="https://github.com/rajankumarup56"
-        target="_blank"
-        class="footer-icon"
-      >
-        GitHub
-      </a>
-    </div>
-
-    <p class="footer-text">
-      © 2026 Ranjan Kumar Upadhyay • Built with clarity & continuous learning
-    </p>
-
-  </footer>
-
-  <!-- TOGGLE SCRIPT -->
-  <script>
-    const devBtn = document.getElementById("devopsBtn");
-    const backBtn = document.getElementById("backendBtn");
-    const devTrack = document.getElementById("devops-track");
-    const backTrack = document.getElementById("backend-track");
-
-    devBtn.onclick = () => {
-      devBtn.classList.add("active");
-      backBtn.classList.remove("active");
-      devTrack.classList.add("visible");
-      devTrack.classList.remove("hidden");
-      backTrack.classList.add("hidden");
-      backTrack.classList.remove("visible");
-    };
-
-    backBtn.onclick = () => {
-      backBtn.classList.add("active");
-      devBtn.classList.remove("active");
-      backTrack.classList.add("visible");
-      backTrack.classList.remove("hidden");
-      devTrack.classList.add("hidden");
-      devTrack.classList.remove("visible");
-    };
-  </script>
+<script src="script.js"></script>
 
 </body>
 </html>
