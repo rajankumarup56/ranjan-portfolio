@@ -1,31 +1,11 @@
 # Deployment Guide
 
-This portfolio is deployed using GitHub Pages.
+## Steps
 
-## Steps to Deploy
-
-1. Push code to GitHub repository
-2. Ensure code is pushed to the main branch
-3. Go to repository Settings
-4. Navigate to Pages
-5. Select branch: main
-6. Save settings
+1. Push code to GitHub
+2. Go to Settings → Pages
+3. Select branch: main
+4. Save
 
 ## Live URL
-
 https://rajankumarup56.github.io/ranjan-portfolio/
-
----
-
-## Tech Stack
-
-HTML
-CSS
-JavaScript
-GitHub Pages
-
----
-
-## Author
-
-Ranjan Kumar Upadhyay
