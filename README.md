@@ -4,7 +4,7 @@ Welcome to my personal portfolio website showcasing my DevOps & Cloud projects.
 
 ---
 
-## 🌐 Live Portfolio
+## 🌐 Live Website
 
 👉 https://rajankumarup56.github.io/ranjan-portfolio/
 
