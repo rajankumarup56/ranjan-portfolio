@@ -1,14 +1,17 @@
 console.log("Portfolio Loaded 🚀");
 
-// Scroll animation
-const sections = document.querySelectorAll(".section");
+// SCROLL REVEAL
+function revealOnScroll() {
+  const reveals = document.querySelectorAll(".reveal");
 
-window.addEventListener("scroll", () => {
-  sections.forEach((section) => {
-    const position = section.getBoundingClientRect().top;
+  reveals.forEach((el) => {
+    const windowHeight = window.innerHeight;
+    const elementTop = el.getBoundingClientRect().top;
 
-    if (position < window.innerHeight - 100) {
-      section.classList.add("show");
+    if (elementTop < windowHeight - 100) {
+      el.classList.add("active");
     }
   });
-});
+}
+
+window.addEventListener("scroll", revealOnScroll);
