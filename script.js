@@ -1,17 +1,10 @@
-console.log("Portfolio Loaded 🚀");
+console.log("Portfolio Loaded");
 
-// SCROLL REVEAL
-function revealOnScroll() {
-  const reveals = document.querySelectorAll(".reveal");
-
-  reveals.forEach((el) => {
-    const windowHeight = window.innerHeight;
-    const elementTop = el.getBoundingClientRect().top;
-
-    if (elementTop < windowHeight - 100) {
-      el.classList.add("active");
-    }
+// Smooth scroll
+document.querySelectorAll("nav a").forEach(link => {
+  link.addEventListener("click", function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute("href"))
+      .scrollIntoView({ behavior: "smooth" });
   });
-}
-
-window.addEventListener("scroll", revealOnScroll);
+});
