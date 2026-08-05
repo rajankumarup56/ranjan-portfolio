@@ -1,4 +1,6 @@
-console.log("Portfolio Loaded");
+function downloadResume() {
+  alert("Add your resume link here");
+}
 
 // Smooth scroll
 document.querySelectorAll("nav a").forEach(link => {
