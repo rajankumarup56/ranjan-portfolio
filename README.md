@@ -1,37 +1,58 @@
-# Rajan Kumar Portfolio
+# 🚀 Portfolio - Ranjan Kumar Upadhyay
 
-## 🚀 About Me
-Backend Developer with experience in .NET environment and MERN stack.
-Interested in Cyber Security and secure application development.
+## 👨‍💻 Backend Developer | MERN Stack | Security Mindset
 
----
-
-## 🛠 Skills
-- Backend: C#, Node.js
-- Database: SQL, MS Access
-- Frontend: HTML, CSS, JS
-- Tools: Git, API, DevOps Basics
-- Security: Cyber Security Fundamentals
+This is my personal portfolio website showcasing my skills, projects, and experience as a backend-focused developer.
 
 ---
 
-## 💻 Projects
+## 🔥 Features
 
-### 1. MERN Web App
-Full stack project with authentication and API integration
-
-### 2. Backend API
-CRUD operations with database connectivity
-
-### 3. Cyber Security Tool
-Password checker / scanning tool
+- Dynamic project loading using GitHub API
+- Project filtering (Backend / MERN / Security)
+- Modern UI with glassmorphism design
+- Smooth animations and typing effect
+- Responsive design (mobile + desktop)
+- Resume download option
 
 ---
 
-## 🔗 GitHub
-https://github.com/rajankumarup56
+## 🛠 Tech Stack
+
+- HTML, CSS, JavaScript
+- GitHub API
+- MERN Stack Knowledge
+- Backend Development (.NET + Node.js)
+- Basic DevOps & Security Concepts
 
 ---
 
-## 📧 Contact
-rajankumarup56@zohomail.in
+## 📂 Projects Included
+
+- MERN Full Stack Application (Authentication + API)
+- Backend REST API (CRUD + Database)
+- Security Tool (Password checker / Scanner)
+
+---
+
+## 🎯 Objective
+
+To work as a backend developer where I can build secure, scalable systems and apply my knowledge of software development and cybersecurity.
+
+---
+
+## 📬 Contact
+
+- Email: rajankumarup56@zohomail.in
+- GitHub: https://github.com/rajankumarup56
+- LinkedIn: (Add your LinkedIn link)
+
+---
+
+## 🌐 Live Portfolio
+
+(After deployment, add your live link here)
+
+---
+
+⭐ If you like this project, feel free to star the repo!

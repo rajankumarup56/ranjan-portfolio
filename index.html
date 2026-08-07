@@ -1,54 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Rajan Kumar | Backend Developer</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Developer Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  color:white;
+  overflow-x:hidden;
+}
+
+/* NAV */
+nav{
+  display:flex;
+  justify-content:space-between;
+  padding:20px 40px;
+  position:sticky;
+  top:0;
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.05);
+}
+
+nav a{
+  color:white;
+  margin-left:20px;
+  text-decoration:none;
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:100px 20px;
+}
+
+.hero h1{
+  font-size:3rem;
+}
+
+.typing{
+  color:#00f2fe;
+  font-weight:500;
+}
+
+/* BUTTON */
+.btn{
+  padding:10px 20px;
+  margin-top:20px;
+  border:none;
+  border-radius:20px;
+  background:#00f2fe;
+  color:black;
+  cursor:pointer;
+  text-decoration:none;
+}
+
+/* GLASS CARD */
+.card{
+  background: rgba(255,255,255,0.08);
+  border-radius:15px;
+  padding:20px;
+  backdrop-filter: blur(15px);
+  margin:20px;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform: translateY(-10px);
+}
+
+/* SECTIONS */
+section{
+  padding:60px 20px;
+}
+
+/* PROJECTS */
+.projects{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+/* FILTER */
+.filters{
+  text-align:center;
+}
+
+.filters button{
+  margin:10px;
+  padding:8px 15px;
+  border:none;
+  border-radius:15px;
+  cursor:pointer;
+}
+
+/* LOADER */
+.loader{
+  border:5px solid #f3f3f3;
+  border-top:5px solid #00f2fe;
+  border-radius:50%;
+  width:40px;
+  height:40px;
+  animation:spin 1s linear infinite;
+  margin:30px auto;
+}
+
+@keyframes spin{
+  0%{transform:rotate(0)}
+  100%{transform:rotate(360deg)}
+}
+
+/* EXPERIENCE */
+.timeline{
+  max-width:800px;
+  margin:auto;
+}
+
+.timeline .card{
+  margin:20px 0;
+}
+
+/* ANIMATION */
+.fade{
+  opacity:0;
+  transform:translateY(20px);
+  transition:0.6s;
+}
+
+.fade.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+</style>
 </head>
+
 <body>
 
-<!-- 🔥 LOADER -->
-<div id="loader">Loading...</div>
-
-<header>
-  <h2>Rajan Kumar</h2>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
+<!-- NAV -->
+<nav>
+  <h2>Portfolio</h2>
+  <div>
     <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
     <a href="#contact">Contact</a>
-  </nav>
-</header>
-
-<section class="hero">
-  <h1 id="typing"></h1>
-  <p>Backend Developer | Security Mindset | MERN + .NET</p>
-  <button onclick="downloadResume()">Download Resume</button>
-  <button onclick="openLinkedIn()">LinkedIn</button>
-</section>
-
-<section id="about">
-  <h2>About Me</h2>
-  <p>
-    Backend developer with hands-on .NET exposure, MERN training,
-    and security-focused development mindset.
-  </p>
-</section>
-
-<section id="skills">
-  <h2>Skills</h2>
-  <div class="grid">
-    <div>Backend: C#, Node.js</div>
-    <div>Database: SQL, MS Access</div>
-    <div>Frontend: HTML, CSS, JS</div>
-    <div>Tools: Git, APIs, DevOps</div>
-    <div>Security: Secure Coding</div>
   </div>
-</section>
+</nav>
 
-<!-- 🔥 FILTER BUTTONS -->
+<!-- HERO -->
+<div class="hero">
+  <h1>Hi, I'm Developer</h1>
+  <p class="typing"></p>
+  <br>
+  <a href="resume.pdf" class="btn">Download Resume</a>
+  <a href="https://linkedin.com" class="btn">LinkedIn</a>
+</div>
+
+<!-- PROJECTS -->
 <section id="projects">
-  <h2>Projects</h2>
+  <h2 style="text-align:center;">Projects</h2>
 
   <div class="filters">
     <button onclick="filterProjects('all')">All</button>
@@ -57,24 +177,119 @@
     <button onclick="filterProjects('security')">Security</button>
   </div>
 
-  <div id="project-container"></div>
+  <div id="loader" class="loader"></div>
+
+  <div class="projects" id="projectsContainer"></div>
 </section>
 
+<!-- EXPERIENCE -->
+<section id="experience">
+  <h2 style="text-align:center;">Experience</h2>
+
+  <div class="timeline">
+
+    <div class="card fade">
+      <h3>Backend Intern</h3>
+      <p>Worked on APIs, authentication & database design</p>
+      <small>2024</small>
+    </div>
+
+    <div class="card fade">
+      <h3>Security Projects</h3>
+      <p>Built vulnerability testing tools & secure auth systems</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
 <section id="contact">
-  <h2>Contact</h2>
-  <p>Email: rajankumarup56@zohomail.in</p>
-  <p>
-    GitHub:
-    <a href="https://github.com/rajankumarup56" target="_blank">
-      github.com/rajankumarup56
-    </a>
-  </p>
+  <h2 style="text-align:center;">Contact</h2>
+
+  <div class="card" style="text-align:center;">
+    <p>Email: your@email.com</p>
+    <p>GitHub: github.com/yourusername</p>
+  </div>
 </section>
 
-<footer>
-  <p>© 2026 Rajan Kumar</p>
-</footer>
+<script>
 
-<script src="script.js"></script>
+// TYPING ANIMATION
+const text = "Backend Developer | MERN Stack | Security Enthusiast";
+let i=0;
+function typing(){
+  if(i<text.length){
+    document.querySelector(".typing").innerHTML+=text.charAt(i);
+    i++;
+    setTimeout(typing,50);
+  }
+}
+typing();
+
+// FETCH GITHUB
+const username = "yourusername";
+let allRepos=[];
+
+async function fetchRepos(){
+  try{
+    const res = await fetch(`https://api.github.com/users/${username}/repos`);
+    const data = await res.json();
+    allRepos=data;
+    document.getElementById("loader").style.display="none";
+    showRepos(data);
+  }catch{
+    document.getElementById("loader").innerHTML="Error loading projects";
+  }
+}
+
+function showRepos(repos){
+  const container=document.getElementById("projectsContainer");
+  container.innerHTML="";
+
+  repos.slice(0,6).forEach(repo=>{
+    const div=document.createElement("div");
+    div.className="card fade";
+
+    div.innerHTML=`
+      <h3>${repo.name}</h3>
+      <p>${repo.description || "No description"}</p>
+      <a href="${repo.html_url}" target="_blank" class="btn">View Code</a>
+    `;
+
+    container.appendChild(div);
+  });
+
+  observe();
+}
+
+// FILTER LOGIC
+function filterProjects(type){
+  if(type==="all") return showRepos(allRepos);
+
+  const filtered = allRepos.filter(repo =>
+    repo.name.toLowerCase().includes(type)
+  );
+
+  showRepos(filtered);
+}
+
+// SCROLL ANIMATION
+function observe(){
+  const items=document.querySelectorAll(".fade");
+  const observer=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add("show");
+      }
+    });
+  });
+
+  items.forEach(item=>observer.observe(item));
+}
+
+fetchRepos();
+
+</script>
+
 </body>
 </html>
