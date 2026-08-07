@@ -1,42 +1,50 @@
-// 🔥 PROJECT DATA
-const projects = [
-  {
-    title: "MERN App",
-    desc: "Full stack app with authentication",
-    image: "assets/project1.png",
-    github: "https://github.com/rajankumarup56/project1"
-  },
-  {
-    title: "Backend API",
-    desc: "CRUD API with SQL database",
-    image: "assets/project2.png",
-    github: "https://github.com/rajankumarup56/project2"
-  },
-  {
-    title: "Security Tool",
-    desc: "Password strength checker",
-    image: "",
-    github: "https://github.com/rajankumarup56/project3"
-  }
-];
+const username = "rajankumarup56";
+let allProjects = [];
 
 // 🔥 LOAD PROJECTS
-function loadProjects() {
-  const container = document.getElementById("project-container");
+async function loadProjects() {
+  const res = await fetch(`https://api.github.com/users/${username}/repos`);
+  const data = await res.json();
 
-  projects.forEach(project => {
+  allProjects = data;
+  displayProjects(data);
+
+  document.getElementById("loader").style.display = "none";
+}
+
+// 🔥 DISPLAY PROJECTS
+function displayProjects(projects) {
+  const container = document.getElementById("project-container");
+  container.innerHTML = "";
+
+  projects.slice(0, 6).forEach(repo => {
     const card = document.createElement("div");
     card.classList.add("project-card");
 
     card.innerHTML = `
-      ${project.image ? `<img src="${project.image}" alt="project">` : ""}
-      <h3>${project.title}</h3>
-      <p>${project.desc}</p>
-      <a href="${project.github}" target="_blank">View Code</a>
+      <h3>${repo.name}</h3>
+      <p>${repo.description || "No description"}</p>
+      <a href="${repo.html_url}" target="_blank">View Code</a>
     `;
 
     container.appendChild(card);
   });
+
+  revealOnScroll();
+}
+
+// 🔥 FILTER LOGIC
+function filterProjects(type) {
+  if (type === "all") {
+    displayProjects(allProjects);
+    return;
+  }
+
+  const filtered = allProjects.filter(repo =>
+    repo.name.toLowerCase().includes(type)
+  );
+
+  displayProjects(filtered);
 }
 
 // 🔥 SCROLL ANIMATION
@@ -45,19 +53,37 @@ function revealOnScroll() {
 
   cards.forEach(card => {
     const top = card.getBoundingClientRect().top;
-    const windowHeight = window.innerHeight;
-
-    if (top < windowHeight - 100) {
+    if (top < window.innerHeight - 100) {
       card.classList.add("show");
     }
   });
 }
 
-// 🔥 RESUME BUTTON
-function downloadResume() {
-  alert("Add your resume link here");
+// 🔥 TYPING EFFECT
+const text = "Backend Developer | Security Mindset";
+let i = 0;
+
+function typingEffect() {
+  if (i < text.length) {
+    document.getElementById("typing").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typingEffect, 50);
+  }
 }
 
-// 🔥 INIT
-window.onload = loadProjects;
+// 🔥 BUTTONS
+function downloadResume() {
+  window.open("assets/resume.pdf");
+}
+
+function openLinkedIn() {
+  window.open("https://linkedin.com/in/your-profile");
+}
+
+// INIT
+window.onload = () => {
+  loadProjects();
+  typingEffect();
+};
+
 window.addEventListener("scroll", revealOnScroll);

@@ -2,10 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Ranjan Kumar Upadhyay | Backend Developer</title>
+  <title>Rajan Kumar | Backend Developer</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<!-- 🔥 LOADER -->
+<div id="loader">Loading...</div>
 
 <header>
   <h2>Rajan Kumar</h2>
@@ -18,33 +21,42 @@
 </header>
 
 <section class="hero">
-  <h1>Backend Developer</h1>
-  <p>Security Mindset | MERN Stack | .NET Exposure</p>
+  <h1 id="typing"></h1>
+  <p>Backend Developer | Security Mindset | MERN + .NET</p>
   <button onclick="downloadResume()">Download Resume</button>
+  <button onclick="openLinkedIn()">LinkedIn</button>
 </section>
 
 <section id="about">
   <h2>About Me</h2>
   <p>
-    Backend-focused developer with experience in .NET and databases.
-    Trained in MERN stack and building secure applications.
+    Backend developer with hands-on .NET exposure, MERN training,
+    and security-focused development mindset.
   </p>
 </section>
 
 <section id="skills">
   <h2>Skills</h2>
   <div class="grid">
-    <div>Backend: C#, Node.js, Express</div>
+    <div>Backend: C#, Node.js</div>
     <div>Database: SQL, MS Access</div>
     <div>Frontend: HTML, CSS, JS</div>
-    <div>Tools: Git, API, DevOps</div>
+    <div>Tools: Git, APIs, DevOps</div>
     <div>Security: Secure Coding</div>
   </div>
 </section>
 
-<!-- ✅ DYNAMIC PROJECT SECTION -->
+<!-- 🔥 FILTER BUTTONS -->
 <section id="projects">
   <h2>Projects</h2>
+
+  <div class="filters">
+    <button onclick="filterProjects('all')">All</button>
+    <button onclick="filterProjects('backend')">Backend</button>
+    <button onclick="filterProjects('mern')">MERN</button>
+    <button onclick="filterProjects('security')">Security</button>
+  </div>
+
   <div id="project-container"></div>
 </section>
 
@@ -60,7 +72,7 @@
 </section>
 
 <footer>
-  <p>© 2026 Ranjan Kumar Upadhyay</p>
+  <p>© 2026 Rajan Kumar</p>
 </footer>
 
 <script src="script.js"></script>
