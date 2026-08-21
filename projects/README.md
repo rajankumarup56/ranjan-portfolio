@@ -1,471 +1,319 @@
-# 🚀 Ranjan Kumar Upadhyay — Project Portfolio
+# Ranjan Kumar Upadhyay — Project Portfolio
 
-This document contains the major academic, professional, cybersecurity, cloud, DevOps and software-development projects associated with my portfolio.
+This directory contains the major academic, cybersecurity, cloud/DevOps, software-development and business-oriented projects associated with my technical learning and professional development.
 
-The projects are presented according to my actual learning and practical experience. Experimental, prototype and in-progress projects are clearly identified.
+The projects are presented with an emphasis on practical implementation, security awareness, cloud technologies, automation, monitoring, testing and real-world business workflows.
 
 ---
 
-# 🛡️ 1. Cyber Security Projects
+## 1. MCA Cyber Security Major Project
 
-## Autonomous Cyber Defense System using AI for Real-Time Threat Hunting in Cloud ERP
+### AI-Powered Autonomous Cyber Defense System for Real-Time Threat Hunting in Cloud ERP Environments
 
-**Type:** MCA Cyber Security Major Project  
-**Status:** Prototype / Academic Project  
-**Focus:** Cyber Security · AI-Assisted Threat Hunting · Cloud Security · ERP Security
+**Academic Project — MCA Cyber Security Specialization**
 
-### Overview
+The project proposes an AI-assisted, human-governed cyber-defense workflow for identifying and prioritizing potentially suspicious activity in cloud-based ERP environments.
 
-A prototype concept for AI-assisted real-time threat hunting in cloud-integrated ERP environments.
+### Core Objective
 
-The proposed system focuses on collecting authorized cloud audit telemetry, normalizing security events, identifying unusual patterns and providing contextual alerts for analyst review.
+The objective is to design a prototype capable of converting authorized audit telemetry into contextual threat-hunting signals that can help analysts investigate suspicious activity.
 
-### Core Workflow
+### Key Areas
 
-Cloud Audit Logs  
-→ Data Collection  
-→ Log Normalization  
-→ Feature Extraction  
-→ Anomaly-Oriented Analysis  
-→ Threat Prioritization  
-→ Alert Generation  
-→ Analyst Review
+* Cloud ERP security
+* Cyber threat detection
+* Security event analysis
+* Anomaly-oriented detection
+* Audit-log analysis
+* Threat hunting
+* Role-aware analysis
+* Privileged activity monitoring
+* Source-context analysis
+* Explainable prioritization
+* Human-in-the-loop security operations
 
-### Security Focus
+### Proposed Workflow
 
-- Unauthorized access
-- Suspicious API activity
-- Repeated denied requests
-- Privileged actions
-- Unusual source context
-- Abnormal activity patterns
-- Cloud ERP security monitoring
+```text
+Authorized Audit Telemetry
+        ↓
+Event Normalization
+        ↓
+Validation
+        ↓
+Context Extraction
+        ↓
+Feature Engineering
+        ↓
+Anomaly / Priority Analysis
+        ↓
+Threat-Hunting Context
+        ↓
+Analyst Review
+        ↓
+Disposition / Feedback
+```
 
-### Technologies / Concepts
+### Illustrative Detection Signals
 
-- Python
-- AWS CloudTrail
-- AWS CloudWatch
-- Log Analysis
-- Anomaly Detection
-- Cyber Threat Hunting
-- Cloud Security
-- ERP Security
-- AI-assisted analysis
+The prototype considers contextual signals such as:
 
-### Important Project Boundary
+* Rare privileged actions
+* Repeated denied requests
+* Unusual source context
+* Unusual timing
+* Resource sensitivity
+* Role privilege
+* Failure frequency
+* Actor and source context
 
-This is a prototype-level academic project.
+### Important Evidence Boundary
+
+This project is documented as a **prototype design and research implementation**.
 
 It does not claim:
 
-- Production deployment
-- Enterprise-scale testing
-- Verified production accuracy
-- Automated containment
-- Real enterprise log data
+* Production deployment
+* Live enterprise monitoring
+* Verified production accuracy
+* Automated real-world containment
+* Real enterprise log exports
+* Production incident detection
 
-The system keeps human analysts in the decision loop.
+Illustrative scenarios are used to demonstrate the proposed workflow.
+
+### Prototype Test Strategy
+
+| Test ID | Input                   | Expected Behaviour                    |
+| ------- | ----------------------- | ------------------------------------- |
+| T-01    | Valid audit event       | Normalize and retain source context   |
+| T-02    | Missing essential field | Flag validation exception             |
+| T-03    | Rare privileged action  | Generate high-priority review context |
+| T-04    | Denied-request burst    | Derive frequency signal               |
+| T-05    | Analyst disposition     | Persist review outcome                |
+
+### Evidence
+
+Academic project evidence is maintained separately:
+
+* MCA Synopsis
+* Interim Report
+* Final Report
+* Presentation
+* Presentation Video
+* Plagiarism Report
 
 ---
 
-# ☁️ 2. Cloud Security Monitoring and Threat Detection
+# 2. Cloud Security Monitoring on AWS
 
-**Type:** Cyber Security / Cloud Project  
-**Focus:** AWS Security Monitoring · Threat Detection · Logging
+### Cloud Security Monitoring and Threat Detection
 
-### Overview
-
-A cloud-security monitoring prototype based on AWS audit and monitoring services.
+A cloud-security monitoring project focused on collecting and analyzing AWS audit activity and generating security alerts.
 
 ### Architecture
 
-AWS CloudTrail  
-→ CloudWatch Logs  
-→ Metric Filters  
-→ CloudWatch Alarms  
-→ SNS Notifications
+```text
+AWS CloudTrail
+      ↓
+CloudWatch Logs
+      ↓
+Metric Filters
+      ↓
+CloudWatch Alarms
+      ↓
+SNS Notifications
+      ↓
+Security Review
+```
 
-### Security Events
+### Security Events Considered
 
-The monitoring design considers events such as:
-
-- Root account activity
-- Unauthorized API calls
-- Console login failures
-- IAM changes
-- Security group modifications
-- Suspicious cloud activity
+* Root account activity
+* Unauthorized API calls
+* Console login failures
+* IAM changes
+* Security-group modifications
 
 ### Technologies
 
-- AWS CloudTrail
-- AWS CloudWatch
-- AWS SNS
-- IAM
-- Lambda
-- Log Analysis
-- Cloud Security
+* AWS CloudTrail
+* AWS CloudWatch
+* Amazon SNS
+* IAM
+* Lambda
+* Terraform
+
+### Evidence
+
+The implementation and documentation are maintained in the corresponding GitHub repository.
 
 ---
 
-# 🔐 3. Secure AWS Cloud Infrastructure
+# 3. Secure AWS Cloud Infrastructure
 
-**Type:** Cloud Security Project  
-**Focus:** AWS · VPC · Network Security · Bastion Architecture
+### Secure AWS Cloud Infrastructure with Bastion Host
 
-### Overview
-
-A secure AWS infrastructure design using public and private network segmentation.
+A cloud infrastructure project demonstrating secure access to private resources using a bastion-host architecture.
 
 ### Architecture
 
-Internet  
-↓  
-Internet Gateway  
-↓  
-Public Subnet  
-↓  
-Bastion Host  
-↓  
-Private Subnet  
-↓  
+```text
+Internet
+   ↓
+Internet Gateway
+   ↓
+Public Subnet
+   ↓
+Bastion Host
+   ↓
+Private Subnet
+   ↓
 Private EC2
+```
 
-### Security Concepts
+### Key Concepts
 
-- VPC
-- Public and private subnets
-- Route tables
-- Internet Gateway
-- Security Groups
-- Bastion Host
-- Restricted private access
-- SSH access control
-
-### Technologies
-
-- AWS EC2
-- AWS VPC
-- Security Groups
-- IAM
-- Linux
-- SSH
-- Terraform fundamentals
+* VPC
+* Public subnet
+* Private subnet
+* Internet Gateway
+* Route tables
+* Security Groups
+* Bastion Host
+* SSH access
+* Private EC2 architecture
 
 ---
 
-# 🏗️ 4. Highly Available AWS Web Architecture
+# 4. Highly Available AWS Web Architecture
 
-**Type:** Cloud Architecture Project  
-**Focus:** AWS · Availability · Scalability · Infrastructure
+A cloud architecture project focused on designing a highly available web environment using AWS infrastructure concepts.
 
-### Overview
+### Key Areas
 
-An AWS architecture project focused on designing a highly available web application environment.
-
-### Concepts
-
-- High availability
-- Fault tolerance
-- Network segmentation
-- Load distribution
-- Scalable cloud infrastructure
-- Secure access
-
-### Technologies
-
-- AWS
-- EC2
-- VPC
-- Load Balancing concepts
-- Auto Scaling concepts
-- Security Groups
-- Cloud monitoring
+* Availability
+* Network architecture
+* EC2
+* VPC
+* Load distribution
+* Security controls
+* Infrastructure design
 
 ---
 
-# 🔄 5. Secure CI/CD / DevSecOps Pipeline
+# 5. Secure CI/CD / DevSecOps Pipeline
 
-**Type:** DevOps / Security Project  
-**Focus:** CI/CD · Automation · DevSecOps
+A project focused on integrating security considerations into the software delivery lifecycle.
 
-### Overview
+### Key Areas
 
-A project exploring secure software delivery using automated CI/CD practices and security-oriented checks.
-
-### Workflow
-
-Developer  
-→ Git  
-→ GitHub  
-→ CI/CD Pipeline  
-→ Testing / Validation  
-→ Security Checks  
-→ Deployment
-
-### Technologies / Concepts
-
-- Git
-- GitHub
-- Jenkins
-- GitHub Actions
-- YAML
-- CI/CD
-- DevSecOps
-- Automation
-- Security validation
+* Git
+* CI/CD
+* Jenkins
+* GitHub Actions
+* YAML
+* Automated workflows
+* Security checks
+* DevSecOps concepts
 
 ---
 
-# 🌐 6. Network Security & Threat Detection Lab
+# 6. Network Security & Threat Detection Lab
 
-**Type:** Cyber Security Lab  
-**Focus:** Network Security · Threat Detection · Security Analysis
+A cybersecurity laboratory project focused on understanding network activity, security events and threat-detection concepts.
 
-### Overview
+### Key Areas
 
-A practical security-learning environment focused on understanding network activity, suspicious behaviour and threat-detection concepts.
-
-### Areas
-
-- Network monitoring
-- Threat identification
-- Log analysis
-- Suspicious activity analysis
-- Security events
-- Incident-oriented investigation
+* Network security
+* Threat detection
+* Log analysis
+* Security monitoring
+* Attack-pattern analysis
+* Defensive security concepts
 
 ---
 
-# 💻 7. MERN Stack Authentication System
+# 7. Full-Stack / MERN Learning Projects
 
-**Type:** Software Development Project  
-**Status:** In Progress / Learning Project  
-**Focus:** Web Development · Authentication · REST API
+I have also worked on full-stack development learning projects through Coding Ninjas.
 
-### Overview
+My stronger hands-on foundation currently includes:
 
-A learning project focused on implementing user authentication using the MERN stack.
+* HTML
+* CSS
+* JavaScript
 
-### Planned / Implemented Concepts
-
-- User registration
-- User login
-- Password hashing
-- JWT authentication
-- REST APIs
-- User management
-- MongoDB database
-
-### Technologies
-
-- React
-- Node.js
-- Express.js
-- MongoDB
-- JWT
-- bcrypt
-
-### Project Boundary
-
-This project represents my MERN-stack learning and development work. It should not be interpreted as my primary specialization.
+Additional full-stack technologies have been studied as part of the learning program, while the primary professional direction remains Cyber Security, Cloud and DevOps.
 
 ---
 
-# 🖥️ 8. Frontend Login System
+# 8. Software Development — PMS/ERP Experience
 
-**Type:** Web Development Project  
-**Focus:** HTML · CSS · JavaScript
-
-### Overview
-
-A responsive login interface developed to practice frontend development and client-side validation.
-
-### Features
-
-- Responsive UI
-- Login form
-- Client-side validation
-- User-friendly interface
-- Form handling
-
-### Technologies
-
-- HTML
-- CSS
-- JavaScript
-
----
-
-# 🏢 9. PMS / ERP Software Development Experience
-
-**Type:** Professional Software Development Experience  
-**Status:** Ongoing
-
-### Overview
-
-Professional experience working with a multi-module PMS/ERP software environment and its connected web-based business systems.
+As part of my Software Developer Internship, I have worked with a business-oriented PMS/ERP software environment.
 
 ### Areas of Work
 
-- Sales module workflows
-- Lifting workflow
-- Business-process implementation
-- Floating-button functionality
-- Compact data windows
-- PMS software to web-system synchronization
-- PMS Advance web platform
-- Customer-specific requirements
-- WhatsApp communication workflows
-- Printing workflows
-- Reporting
-- Excel exports
-- Manual testing
-- Bug fixing
-- Application validation
-- Deployment support
+* Sales workflows
+* Lifting workflow
+* PMS application workflows
+* PMS Advance web interface
+* Data synchronization
+* Business-process features
+* Floating-button workflows
+* Compact data windows
+* WhatsApp communication workflows
+* Printing workflows
+* Excel reports
+* Report validation
+* Bug fixing
+* Manual testing
+* Customer-specific requirements
+* TFS / Team Explorer
+* PowerShell
+* VS Code
+* Server deployment
 
-### Technical / Operational Exposure
-
-- VS Code
-- PowerShell
-- TFS / Team Explorer
-- Code comparison
-- Check-in and version control
-- Server publishing
-- Testing and validation
-- Customer issue investigation
-
-### Important Business Flow
-
-The PMS desktop software can synchronize relevant information with the connected web-based PMS Advance/business platform.
-
-This provides a practical example of how an offline/desktop business application can interact with a web-based system for data synchronization and business operations.
+This experience provides practical exposure to how software features connect with real business processes and users.
 
 ---
 
-# ☁️ 10. DevOps Training & Practical Learning
+# 9. Project Evidence Philosophy
 
-**Organization:** Orbiqe Technologies Pvt. Ltd., Noida  
-**Period:** July 2025 – April 2026  
-**Program:** BSDM / Skill India associated training
+The portfolio distinguishes between:
 
-### Areas Covered
+### Implemented
 
-- Linux
-- AWS
-- Git
-- GitHub
-- SQL
-- CI/CD
-- Jenkins
-- Terraform fundamentals
-- Ansible
-- Cloud concepts
-- Monitoring
-- Prometheus
-- Grafana
-- DevSecOps concepts
-- Infrastructure and deployment concepts
+Features or systems that were actually developed, configured, tested or used.
 
-### Training Boundary
+### Prototype
 
-The training period included practical learning and project-oriented exposure. Any certification should only be listed separately if officially received.
+Academic or experimental systems designed and demonstrated at prototype level.
+
+### Illustrative
+
+Scenarios or diagrams created to explain a proposed architecture or workflow.
+
+### Future Scope
+
+Features identified for future implementation but not claimed as completed.
+
+This distinction is maintained to keep the portfolio technically honest and professionally credible.
 
 ---
 
-# 📚 11. Full Stack Development Learning
+# 10. Project Repositories
 
-**Platform:** Coding Ninjas  
-**Period:** 2024 – January 2027  
-**Status:** Ongoing
+Individual source repositories contain their own:
 
-### Learning Areas
+* README documentation
+* Architecture
+* Technologies
+* Implementation details
+* Configuration information
+* Screenshots where appropriate
+* Testing information
+* Limitations
+* Future improvements
 
-- HTML
-- CSS
-- JavaScript
-- Frontend development
-- Full-stack development concepts
-- MERN stack
-
-### Current Strength
-
-My strongest completed learning area from this track is:
-
-**HTML · CSS · JavaScript**
-
-Advanced MERN technologies remain part of my ongoing learning.
-
----
-
-# 🎓 12. MCA Cyber Security Academic Work
-
-**Program:** MCA — Cyber Security  
-**University:** Jain University  
-**Expected Completion:** 2026
-
-### Major Academic Project
-
-**Autonomous Cyber Defense System using AI for Real-Time Threat Hunting in Cloud ERP (Prototype)**
-
-### Academic Areas
-
-- Cloud Security
-- Network Security
-- Cyber Threat Intelligence
-- Ethical Hacking
-- Defensive Cyber Security
-- Vulnerability Analysis
-- Penetration Testing
-- AI & Machine Learning
-- Python
-- Cloud Computing
-
----
-
-# 🧭 Project Categories
-
-| Category | Main Focus |
-|---|---|
-| Cyber Security | Threat Detection, Cloud Security, Threat Hunting |
-| Cloud | AWS, VPC, Monitoring, Infrastructure |
-| DevOps | CI/CD, Git, Jenkins, Automation |
-| Software Development | PMS/ERP, Web Development, APIs |
-| Web Development | HTML, CSS, JavaScript, MERN |
-| Academic | MCA Cyber Security Research & Prototype |
-
----
-
-# ⚠️ Project Authenticity Statement
-
-The projects in this portfolio represent a combination of:
-
-- Academic projects
-- Prototype implementations
-- Practical learning projects
-- Cloud and security labs
-- Professional software-development experience
-
-Project descriptions are intentionally written to distinguish between implemented work, prototype designs, learning projects and professional experience.
-
-No production-level capability, certification, performance metric or deployment claim should be assumed unless explicitly stated.
-
----
-
-# 🔗 Related Resources
-
-- GitHub: https://github.com/rajankumarup56
-- LinkedIn: https://www.linkedin.com/in/ranjan-kumar-upadhyay
-- Portfolio: https://rajankumarup56.github.io/ranjan-portfolio/
-
----
-
-## 🎯 Career Direction
-
-My current career direction combines:
-
-**Software Development + Cyber Security + Cloud + DevOps**
-
-with a particular interest in building secure, scalable and business-oriented software systems.
+The portfolio acts as the central showcase while GitHub repositories provide technical evidence.
