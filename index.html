@@ -8,8 +8,11 @@
 
 <meta
   name="description"
-  content="Ranjan Kumar Upadhyay — Software Developer with experience in PMS/ERP software, application workflows, testing, cloud security and cybersecurity."
+  content="Ranjan Kumar Upadhyay - Software Developer with experience in PMS/ERP software, web development, cloud security, DevOps training and cybersecurity."
 >
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link
   href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
@@ -17,19 +20,25 @@
 >
 
 <style>
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
 :root{
   --bg:#07111f;
   --bg2:#0b1728;
-  --card:rgba(15,29,48,.72);
-  --card2:rgba(20,38,62,.65);
-  --border:rgba(255,255,255,.10);
-  --text:#f4f7fb;
-  --muted:#a9b7c8;
-  --primary:#42d9ff;
-  --primary2:#7c6cff;
-  --success:#4ade80;
+  --card:rgba(15,29,49,.72);
+  --card2:rgba(18,36,59,.82);
+  --border:rgba(148,163,184,.15);
+  --text:#f8fafc;
+  --muted:#9fb0c5;
+  --primary:#38bdf8;
+  --secondary:#818cf8;
+  --success:#34d399;
   --warning:#fbbf24;
-  --shadow:0 25px 80px rgba(0,0,0,.30);
+  --danger:#fb7185;
+  --shadow:0 25px 80px rgba(0,0,0,.35);
 }
 
 *{
@@ -44,91 +53,49 @@ html{
 
 body{
   font-family:'Inter',sans-serif;
-  color:var(--text);
   background:
-    radial-gradient(circle at 10% 10%,rgba(66,217,255,.12),transparent 28%),
-    radial-gradient(circle at 90% 15%,rgba(124,108,255,.13),transparent 30%),
-    linear-gradient(145deg,#050c16,#081321 45%,#07111f);
-  min-height:100vh;
+    radial-gradient(circle at 15% 10%,rgba(56,189,248,.10),transparent 30%),
+    radial-gradient(circle at 85% 20%,rgba(129,140,248,.10),transparent 30%),
+    linear-gradient(135deg,var(--bg),var(--bg2));
+  color:var(--text);
+  line-height:1.7;
   overflow-x:hidden;
-}
-
-body::before{
-  content:"";
-  position:fixed;
-  inset:0;
-  pointer-events:none;
-  background-image:
-    linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
-  background-size:60px 60px;
-  mask-image:linear-gradient(to bottom,black,transparent 90%);
 }
 
 a{
   color:inherit;
 }
 
-.container{
-  width:min(1180px,92%);
-  margin:auto;
+button,
+a{
+  -webkit-tap-highlight-color:transparent;
 }
 
-section{
-  padding:95px 0;
-  position:relative;
-}
-
-.section-title{
-  text-align:center;
-  margin-bottom:55px;
-}
-
-.section-title .eyebrow{
-  color:var(--primary);
-  font-size:.78rem;
-  font-weight:700;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  margin-bottom:12px;
-}
-
-.section-title h2{
-  font-family:'Space Grotesk',sans-serif;
-  font-size:clamp(2rem,4vw,3rem);
-}
-
-.section-title p{
-  color:var(--muted);
-  max-width:720px;
-  margin:15px auto 0;
-  line-height:1.8;
-}
-
-/* NAVIGATION */
+/* =========================================================
+   NAVIGATION
+========================================================= */
 
 nav{
   position:sticky;
   top:0;
   z-index:1000;
-  backdrop-filter:blur(20px);
-  background:rgba(5,12,22,.72);
-  border-bottom:1px solid var(--border);
-}
 
-.nav-inner{
-  min-height:72px;
   display:flex;
-  align-items:center;
   justify-content:space-between;
-  gap:20px;
+  align-items:center;
+
+  padding:16px 6%;
+
+  background:rgba(7,17,31,.72);
+  backdrop-filter:blur(18px);
+
+  border-bottom:1px solid var(--border);
 }
 
 .logo{
   font-family:'Space Grotesk',sans-serif;
   font-weight:700;
   font-size:1.15rem;
-  text-decoration:none;
 }
 
 .logo span{
@@ -137,58 +104,53 @@ nav{
 
 .nav-links{
   display:flex;
-  gap:25px;
-  align-items:center;
+  gap:24px;
 }
 
 .nav-links a{
   text-decoration:none;
-  color:#c9d4e2;
-  font-size:.9rem;
+  color:var(--muted);
+  font-size:.92rem;
   transition:.25s;
 }
 
 .nav-links a:hover{
-  color:var(--primary);
-}
-
-.menu-btn{
-  display:none;
-  background:none;
-  border:1px solid var(--border);
   color:white;
-  padding:8px 11px;
-  border-radius:10px;
-  cursor:pointer;
 }
 
-/* HERO */
+/* =========================================================
+   HERO
+========================================================= */
 
 .hero{
-  min-height:calc(100vh - 72px);
+  min-height:88vh;
+
   display:flex;
   align-items:center;
-  padding:80px 0;
+  justify-content:center;
+
+  text-align:center;
+  padding:90px 20px;
 }
 
-.hero-grid{
-  display:grid;
-  grid-template-columns:1.35fr .65fr;
-  gap:60px;
-  align-items:center;
+.hero-content{
+  max-width:950px;
 }
 
-.badge{
+.eyebrow{
   display:inline-flex;
   align-items:center;
-  gap:9px;
-  padding:8px 13px;
-  border:1px solid rgba(66,217,255,.22);
-  background:rgba(66,217,255,.06);
+  gap:8px;
+
+  padding:7px 14px;
+  border:1px solid rgba(56,189,248,.25);
   border-radius:999px;
-  color:#bfefff;
+
+  color:#bae6fd;
+  background:rgba(56,189,248,.07);
+
   font-size:.82rem;
-  margin-bottom:22px;
+  margin-bottom:25px;
 }
 
 .status-dot{
@@ -196,41 +158,42 @@ nav{
   height:8px;
   border-radius:50%;
   background:var(--success);
-  box-shadow:0 0 14px var(--success);
+  box-shadow:0 0 15px var(--success);
 }
 
 .hero h1{
   font-family:'Space Grotesk',sans-serif;
-  font-size:clamp(3rem,7vw,5.8rem);
-  line-height:.98;
-  letter-spacing:-3px;
+  font-size:clamp(2.7rem,7vw,5.5rem);
+  line-height:1.05;
+  margin-bottom:20px;
 }
 
-.hero h1 span{
-  background:linear-gradient(90deg,var(--primary),#8c82ff);
+.gradient-text{
+  background:linear-gradient(90deg,var(--primary),#a78bfa);
   -webkit-background-clip:text;
-  background-clip:text;
-  color:transparent;
+  -webkit-text-fill-color:transparent;
 }
 
-.hero-role{
-  margin-top:25px;
-  font-size:1.25rem;
-  color:#dbe8f5;
-  min-height:32px;
+.hero-subtitle{
+  min-height:35px;
+  color:#cbd5e1;
+  font-size:clamp(1rem,2vw,1.25rem);
 }
 
 .hero-description{
-  margin-top:20px;
-  max-width:720px;
+  max-width:760px;
+  margin:20px auto;
   color:var(--muted);
-  line-height:1.9;
-  font-size:1rem;
 }
 
-.hero-buttons{
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.actions{
   display:flex;
   flex-wrap:wrap;
+  justify-content:center;
   gap:12px;
   margin-top:30px;
 }
@@ -240,264 +203,148 @@ nav{
   align-items:center;
   justify-content:center;
   gap:8px;
-  padding:12px 18px;
+
+  padding:11px 18px;
   border-radius:12px;
+
   border:1px solid var(--border);
+
   text-decoration:none;
-  font-size:.88rem;
-  font-weight:600;
   cursor:pointer;
-  transition:.25s;
-}
 
-.btn-primary{
-  background:linear-gradient(90deg,var(--primary),#72cfff);
-  color:#03101a;
-  border:none;
-}
+  font-weight:600;
+  font-size:.9rem;
 
-.btn-secondary{
-  background:rgba(255,255,255,.045);
+  background:rgba(255,255,255,.05);
   color:white;
+
+  transition:.25s;
 }
 
 .btn:hover{
   transform:translateY(-2px);
+  border-color:rgba(56,189,248,.45);
+  background:rgba(56,189,248,.10);
+}
+
+.btn-primary{
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:#03111f;
+  border:none;
 }
 
 .btn-primary:hover{
-  box-shadow:0 10px 35px rgba(66,217,255,.18);
+  background:linear-gradient(135deg,#67d5ff,#9a94ff);
 }
 
-/* HERO SIDE CARD */
-
-.profile-card{
-  background:linear-gradient(
-    145deg,
-    rgba(66,217,255,.10),
-    rgba(124,108,255,.10)
-  );
-  border:1px solid var(--border);
-  border-radius:24px;
-  padding:28px;
-  box-shadow:var(--shadow);
-}
-
-.profile-avatar{
-  width:82px;
-  height:82px;
-  border-radius:20px;
-  display:grid;
-  place-items:center;
-  font-family:'Space Grotesk',sans-serif;
-  font-size:2rem;
-  font-weight:700;
-  background:linear-gradient(135deg,var(--primary),var(--primary2));
-  color:#07111f;
-  margin-bottom:22px;
-}
-
-.profile-card h3{
-  font-family:'Space Grotesk',sans-serif;
-  font-size:1.3rem;
-}
-
-.profile-card p{
-  color:var(--muted);
-  line-height:1.7;
-  margin-top:7px;
-  font-size:.9rem;
-}
-
-.profile-line{
-  height:1px;
-  background:var(--border);
-  margin:22px 0;
-}
-
-.quick-info{
-  display:grid;
-  gap:13px;
-}
-
-.quick-info div{
-  display:flex;
-  justify-content:space-between;
-  gap:20px;
+.btn-small{
+  padding:8px 13px;
   font-size:.82rem;
 }
 
-.quick-info span:first-child{
-  color:#7f91a7;
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+section{
+  max-width:1180px;
+  margin:auto;
+  padding:90px 25px;
 }
 
-.quick-info span:last-child{
-  text-align:right;
+.section-heading{
+  margin-bottom:40px;
 }
 
-/* CARDS */
+.section-label{
+  color:var(--primary);
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:.75rem;
+  font-weight:700;
+}
+
+.section-heading h2{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:2.2rem;
+  margin-top:5px;
+}
+
+.section-heading p{
+  color:var(--muted);
+  max-width:720px;
+}
+
+/* =========================================================
+   CARDS
+========================================================= */
 
 .card{
-  background:var(--card);
+  background:linear-gradient(
+    145deg,
+    rgba(255,255,255,.055),
+    rgba(255,255,255,.025)
+  );
+
   border:1px solid var(--border);
-  border-radius:18px;
+  border-radius:20px;
+
   padding:25px;
-  backdrop-filter:blur(18px);
-  box-shadow:0 15px 50px rgba(0,0,0,.15);
+
+  box-shadow:var(--shadow);
+
   transition:.3s;
 }
 
 .card:hover{
-  border-color:rgba(66,217,255,.22);
   transform:translateY(-4px);
+  border-color:rgba(56,189,248,.22);
 }
 
-/* ABOUT */
+/* =========================================================
+   ABOUT
+========================================================= */
 
 .about-grid{
   display:grid;
-  grid-template-columns:1fr 1fr;
+  grid-template-columns:1.5fr 1fr;
   gap:25px;
 }
 
-.about-card h3{
-  font-family:'Space Grotesk',sans-serif;
-  font-size:1.25rem;
-  margin-bottom:13px;
-}
-
-.about-card p{
-  color:var(--muted);
-  line-height:1.85;
-}
-
-.highlight-list{
-  display:grid;
-  gap:12px;
-  margin-top:20px;
+.about-text{
+  color:#cbd5e1;
 }
 
 .highlight{
-  display:flex;
+  color:white;
+  font-weight:600;
+}
+
+.quick-facts{
+  display:grid;
   gap:12px;
-  color:#dce8f5;
-  font-size:.9rem;
 }
 
-.highlight::before{
-  content:"✓";
-  color:var(--primary);
-  font-weight:800;
+.fact{
+  padding:16px;
+  border-radius:14px;
+  background:rgba(255,255,255,.035);
+  border:1px solid var(--border);
 }
 
-/* EXPERIENCE */
-
-.timeline{
-  max-width:900px;
-  margin:auto;
-  position:relative;
+.fact strong{
+  display:block;
+  color:white;
 }
 
-.timeline::before{
-  content:"";
-  position:absolute;
-  left:10px;
-  top:0;
-  bottom:0;
-  width:1px;
-  background:linear-gradient(var(--primary),transparent);
-}
-
-.timeline-item{
-  position:relative;
-  padding-left:42px;
-  margin-bottom:30px;
-}
-
-.timeline-dot{
-  position:absolute;
-  left:4px;
-  top:26px;
-  width:13px;
-  height:13px;
-  border-radius:50%;
-  background:var(--primary);
-  box-shadow:0 0 18px rgba(66,217,255,.55);
-}
-
-.timeline-date{
-  color:var(--primary);
-  font-size:.78rem;
-  font-weight:700;
-  letter-spacing:.5px;
-}
-
-.timeline-item h3{
-  margin:8px 0;
-  font-family:'Space Grotesk',sans-serif;
-  font-size:1.25rem;
-}
-
-.timeline-item p{
+.fact span{
   color:var(--muted);
-  line-height:1.75;
-}
-
-.timeline-item ul{
-  margin:17px 0 0 18px;
-  color:#bdcbd9;
-  line-height:1.8;
   font-size:.88rem;
 }
 
-.tag-row{
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
-  margin-top:18px;
-}
-
-.tag{
-  padding:6px 9px;
-  border-radius:8px;
-  background:rgba(255,255,255,.045);
-  border:1px solid var(--border);
-  color:#b9c8d8;
-  font-size:.72rem;
-}
-
-/* WORKFLOW */
-
-.workflow{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:15px;
-}
-
-.workflow-card{
-  position:relative;
-  padding:23px;
-}
-
-.workflow-number{
-  color:var(--primary);
-  font-family:'Space Grotesk',sans-serif;
-  font-size:.78rem;
-  font-weight:700;
-}
-
-.workflow-card h3{
-  margin:12px 0 9px;
-  font-size:1rem;
-}
-
-.workflow-card p{
-  color:var(--muted);
-  font-size:.82rem;
-  line-height:1.7;
-}
-
-/* SKILLS */
+/* =========================================================
+   SKILLS
+========================================================= */
 
 .skills-grid{
   display:grid;
@@ -506,307 +353,412 @@ nav{
 }
 
 .skill-card h3{
-  font-size:1rem;
-  margin-bottom:15px;
+  margin-bottom:10px;
 }
 
-.skill-list{
+.skill-card p{
+  color:var(--muted);
+  font-size:.9rem;
+}
+
+.tags{
   display:flex;
   flex-wrap:wrap;
   gap:8px;
+  margin-top:15px;
 }
 
-.skill{
-  padding:8px 10px;
-  border-radius:9px;
-  background:rgba(66,217,255,.05);
-  border:1px solid rgba(66,217,255,.12);
-  color:#c9d9e9;
+.tag{
+  padding:5px 10px;
+  border-radius:999px;
   font-size:.75rem;
+
+  background:rgba(56,189,248,.07);
+  color:#bae6fd;
+
+  border:1px solid rgba(56,189,248,.15);
 }
 
-/* PROJECTS */
+/* =========================================================
+   EXPERIENCE
+========================================================= */
 
-.project-toolbar{
+.timeline{
+  position:relative;
+  max-width:900px;
+  margin:auto;
+}
+
+.timeline::before{
+  content:"";
+  position:absolute;
+  left:12px;
+  top:0;
+  bottom:0;
+  width:2px;
+  background:linear-gradient(
+    var(--primary),
+    transparent
+  );
+}
+
+.timeline-item{
+  position:relative;
+  padding-left:45px;
+  margin-bottom:28px;
+}
+
+.timeline-dot{
+  position:absolute;
+  left:4px;
+  top:25px;
+
+  width:18px;
+  height:18px;
+
+  border-radius:50%;
+
+  background:var(--primary);
+  box-shadow:0 0 20px rgba(56,189,248,.55);
+}
+
+.timeline-item h3{
+  font-family:'Space Grotesk',sans-serif;
+}
+
+.timeline-date{
+  color:var(--primary);
+  font-size:.82rem;
+  margin:5px 0 12px;
+}
+
+.timeline-item p,
+.timeline-item li{
+  color:var(--muted);
+  font-size:.9rem;
+}
+
+.timeline-item ul{
+  padding-left:20px;
+  margin-top:12px;
+}
+
+.timeline-item li{
+  margin-bottom:6px;
+}
+
+/* =========================================================
+   PROJECTS
+========================================================= */
+
+.project-filters{
   display:flex;
-  justify-content:center;
   flex-wrap:wrap;
-  gap:9px;
-  margin-bottom:35px;
+  gap:10px;
+  margin-bottom:25px;
 }
 
 .filter-btn{
   border:1px solid var(--border);
   background:rgba(255,255,255,.04);
-  color:#b9c7d7;
-  padding:9px 15px;
-  border-radius:10px;
+  color:var(--muted);
+
+  padding:8px 15px;
+  border-radius:999px;
+
   cursor:pointer;
 }
 
 .filter-btn.active,
 .filter-btn:hover{
-  color:#04101a;
-  background:var(--primary);
+  background:rgba(56,189,248,.12);
+  color:white;
+  border-color:rgba(56,189,248,.35);
 }
 
 .projects-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:20px;
+  gap:18px;
 }
 
 .project-card{
   display:flex;
   flex-direction:column;
+  min-height:270px;
 }
 
-.project-type{
+.project-card .project-type{
   color:var(--primary);
   font-size:.72rem;
-  font-weight:700;
   text-transform:uppercase;
   letter-spacing:1px;
+  font-weight:700;
 }
 
 .project-card h3{
-  margin:10px 0;
-  font-family:'Space Grotesk',sans-serif;
+  margin:8px 0;
 }
 
 .project-card p{
   color:var(--muted);
-  line-height:1.7;
-  font-size:.84rem;
+  font-size:.88rem;
   flex:1;
 }
 
-.project-card .tag-row{
-  margin:18px 0;
+.project-actions{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-top:18px;
 }
 
-/* FEATURED PROJECT */
+/* =========================================================
+   MCA PROJECT
+========================================================= */
 
-.featured{
-  margin-bottom:25px;
+.featured-project{
+  position:relative;
+  overflow:hidden;
+
+  border:1px solid rgba(129,140,248,.25);
+
   background:
-    radial-gradient(circle at 100% 0,rgba(124,108,255,.15),transparent 35%),
-    linear-gradient(145deg,rgba(66,217,255,.07),rgba(255,255,255,.025));
+    radial-gradient(circle at 90% 10%,rgba(129,140,248,.12),transparent 30%),
+    linear-gradient(145deg,rgba(20,35,60,.9),rgba(10,22,38,.9));
 }
 
-.featured-grid{
-  display:grid;
-  grid-template-columns:1.2fr .8fr;
-  gap:35px;
-  align-items:center;
+.featured-project::before{
+  content:"";
+  position:absolute;
+  width:250px;
+  height:250px;
+  right:-100px;
+  top:-100px;
+
+  border-radius:50%;
+  background:rgba(56,189,248,.08);
+  filter:blur(10px);
 }
 
-.featured h3{
+.featured-label{
+  color:#a5b4fc;
+  font-size:.75rem;
+  text-transform:uppercase;
+  letter-spacing:1.5px;
+  font-weight:700;
+}
+
+.featured-project h3{
   font-family:'Space Grotesk',sans-serif;
   font-size:1.7rem;
-  margin:10px 0 14px;
+  margin:8px 0 15px;
 }
 
-.featured p{
-  color:var(--muted);
-  line-height:1.8;
+.featured-project p{
+  color:#b8c6d8;
 }
 
-.feature-points{
-  display:grid;
-  gap:11px;
-  margin:20px 0;
+.architecture{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:8px;
+
+  margin:25px 0;
 }
 
-.feature-points div{
-  color:#cbd8e5;
-  font-size:.86rem;
-}
+.arch-node{
+  padding:9px 12px;
+  border-radius:10px;
 
-.feature-points div::before{
-  content:"→";
-  color:var(--primary);
-  margin-right:9px;
-}
-
-.project-visual{
-  min-height:270px;
+  background:rgba(255,255,255,.05);
   border:1px solid var(--border);
-  border-radius:18px;
-  background:
-    linear-gradient(135deg,rgba(66,217,255,.09),rgba(124,108,255,.08));
-  display:grid;
-  place-items:center;
-  text-align:center;
-  padding:25px;
+
+  font-size:.78rem;
+  color:#dbeafe;
 }
 
-.project-visual strong{
-  display:block;
-  font-family:'Space Grotesk',sans-serif;
-  font-size:2.1rem;
+.arrow{
+  color:var(--primary);
 }
 
-.project-visual span{
-  display:block;
-  color:var(--muted);
-  margin-top:8px;
-}
-
-/* MCA */
-
-.mca-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:22px;
-}
+/* =========================================================
+   DOCUMENTS
+========================================================= */
 
 .document-grid{
   display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:12px;
-  margin-top:20px;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
 }
 
-.doc{
+.document-card h3{
+  font-size:1rem;
+}
+
+.document-card p{
+  color:var(--muted);
+  font-size:.82rem;
+  margin:8px 0 15px;
+}
+
+/* =========================================================
+   DIGITAL PRESENCE
+========================================================= */
+
+.profile-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+}
+
+.profile-card{
+  text-decoration:none;
+  display:block;
+}
+
+.profile-card small{
+  color:var(--primary);
+}
+
+.profile-card p{
+  color:var(--muted);
+  font-size:.83rem;
+  margin-top:5px;
+}
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-card{
+  text-align:center;
+  padding:45px 25px;
+}
+
+.contact-card h2{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:2rem;
+}
+
+.contact-card p{
+  color:var(--muted);
+  margin:10px auto 25px;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+  text-align:center;
+  padding:35px 20px;
+  border-top:1px solid var(--border);
+  color:var(--muted);
+  font-size:.8rem;
+}
+
+/* =========================================================
+   MODAL / WINDOW
+========================================================= */
+
+.modal{
+  position:fixed;
+  inset:0;
+  z-index:5000;
+
+  display:none;
+
+  background:rgba(0,0,0,.78);
+  backdrop-filter:blur(10px);
+
+  padding:30px;
+}
+
+.modal.show{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.modal-window{
+  width:min(1100px,96vw);
+  height:min(88vh,900px);
+
+  background:#0b1524;
+
+  border:1px solid rgba(148,163,184,.2);
+  border-radius:18px;
+
+  overflow:hidden;
+
+  box-shadow:
+    0 40px 100px rgba(0,0,0,.65);
+}
+
+.modal-header{
+  height:58px;
+
   display:flex;
   justify-content:space-between;
   align-items:center;
-  gap:15px;
-  padding:15px;
+
+  padding:0 18px;
+
+  border-bottom:1px solid var(--border);
+  background:#0f1d30;
+}
+
+.modal-title{
+  font-weight:600;
+  font-size:.9rem;
+}
+
+.modal-tools{
+  display:flex;
+  gap:8px;
+}
+
+.modal-close,
+.modal-open{
   border:1px solid var(--border);
-  border-radius:12px;
-  background:rgba(255,255,255,.025);
+  background:rgba(255,255,255,.05);
+  color:white;
+
+  padding:7px 11px;
+  border-radius:8px;
+
+  cursor:pointer;
 }
 
-.doc-info strong{
-  display:block;
-  font-size:.84rem;
+.modal-body{
+  width:100%;
+  height:calc(100% - 58px);
+  background:#111827;
 }
 
-.doc-info span{
-  color:#7f91a7;
-  font-size:.7rem;
+.modal-body iframe{
+  width:100%;
+  height:100%;
+  border:0;
 }
 
-.doc a{
-  flex-shrink:0;
-  font-size:.72rem;
-  color:var(--primary);
-  text-decoration:none;
+.modal-body video{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  background:#000;
 }
 
-/* CAREER */
-
-.career-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:15px;
-}
-
-.career-card{
-  text-align:center;
-}
-
-.career-year{
-  color:var(--primary);
-  font-family:'Space Grotesk',sans-serif;
-  font-weight:700;
-  font-size:1.1rem;
-}
-
-.career-card h3{
-  margin:9px 0;
-  font-size:.92rem;
-}
-
-.career-card p{
-  color:var(--muted);
-  font-size:.76rem;
-  line-height:1.6;
-}
-
-/* PROFESSIONAL HUB */
-
-.hub-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:15px;
-}
-
-.hub-card{
-  text-decoration:none;
-  min-height:130px;
-}
-
-.hub-card .icon{
-  font-size:1.5rem;
-  margin-bottom:13px;
-}
-
-.hub-card h3{
-  font-size:.95rem;
-}
-
-.hub-card p{
-  color:var(--muted);
-  font-size:.74rem;
-  margin-top:6px;
-  line-height:1.6;
-}
-
-/* CONTACT */
-
-.contact-box{
-  max-width:850px;
-  margin:auto;
-  text-align:center;
-}
-
-.contact-box h3{
-  font-family:'Space Grotesk',sans-serif;
-  font-size:1.8rem;
-}
-
-.contact-box p{
-  color:var(--muted);
-  line-height:1.8;
-  margin:13px auto 25px;
-}
-
-.contact-links{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:10px;
-}
-
-/* FOOTER */
-
-footer{
-  border-top:1px solid var(--border);
-  padding:35px 0;
-  color:#75869b;
-  font-size:.76rem;
-}
-
-.footer-inner{
-  display:flex;
-  justify-content:space-between;
-  gap:20px;
-}
-
-.footer-inner a{
-  color:var(--primary);
-  text-decoration:none;
-}
-
-/* ANIMATION */
+/* =========================================================
+   ANIMATION
+========================================================= */
 
 .fade{
   opacity:0;
   transform:translateY(20px);
-  transition:.7s ease;
+  transition:.6s ease;
 }
 
 .fade.show{
@@ -814,229 +766,158 @@ footer{
   transform:translateY(0);
 }
 
-/* RESPONSIVE */
+/* =========================================================
+   RESPONSIVE
+========================================================= */
 
-@media(max-width:950px){
+@media(max-width:900px){
 
-  .hero-grid,
-  .featured-grid,
-  .about-grid,
-  .mca-grid{
+  .about-grid{
     grid-template-columns:1fr;
   }
 
-  .projects-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
   .skills-grid{
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:1fr 1fr;
   }
 
-  .workflow{
-    grid-template-columns:repeat(2,1fr);
+  .projects-grid{
+    grid-template-columns:1fr 1fr;
   }
 
-  .career-grid,
-  .hub-grid{
-    grid-template-columns:repeat(2,1fr);
+  .document-grid{
+    grid-template-columns:1fr 1fr;
   }
 
+  .profile-grid{
+    grid-template-columns:1fr 1fr;
+  }
 }
 
-@media(max-width:700px){
+@media(max-width:650px){
 
-  .nav-inner{
-    min-height:64px;
-  }
-
-  .menu-btn{
-    display:block;
+  nav{
+    padding:14px 20px;
   }
 
   .nav-links{
     display:none;
-    position:absolute;
-    top:64px;
-    left:0;
-    right:0;
-    padding:18px;
-    flex-direction:column;
-    align-items:flex-start;
-    background:rgba(5,12,22,.97);
-    border-bottom:1px solid var(--border);
-  }
-
-  .nav-links.open{
-    display:flex;
-  }
-
-  .hero{
-    padding:70px 0;
-  }
-
-  .hero h1{
-    letter-spacing:-2px;
-  }
-
-  .projects-grid,
-  .skills-grid,
-  .workflow,
-  .career-grid,
-  .hub-grid,
-  .document-grid{
-    grid-template-columns:1fr;
   }
 
   section{
-    padding:70px 0;
+    padding:65px 18px;
   }
 
-  .footer-inner{
-    flex-direction:column;
+  .skills-grid,
+  .projects-grid,
+  .document-grid,
+  .profile-grid{
+    grid-template-columns:1fr;
+  }
+
+  .timeline-item{
+    padding-left:35px;
+  }
+
+  .modal{
+    padding:10px;
+  }
+
+  .modal-window{
+    width:100%;
+    height:94vh;
   }
 }
+
 </style>
 </head>
 
 <body>
 
-<!-- =========================
+<!-- =======================================================
      NAVIGATION
-========================= -->
+======================================================= -->
 
 <nav>
-  <div class="container nav-inner">
 
-    <a href="#home" class="logo">
-      Ranjan<span>.</span>
-    </a>
-
-    <button class="menu-btn" onclick="toggleMenu()">
-      ☰
-    </button>
-
-    <div class="nav-links" id="navLinks">
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#mca">MCA Project</a>
-      <a href="#career">Career</a>
-      <a href="#contact">Contact</a>
-    </div>
-
+  <div class="logo">
+    Ranjan<span>.</span>
   </div>
+
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#mca">MCA Project</a>
+    <a href="#documents">Documents</a>
+    <a href="#contact">Contact</a>
+  </div>
+
 </nav>
 
 
-<!-- =========================
+<!-- =======================================================
      HERO
-========================= -->
+======================================================= -->
 
-<header class="hero" id="home">
+<header class="hero">
 
-  <div class="container hero-grid">
+  <div class="hero-content">
 
-    <div>
-
-      <div class="badge">
-        <span class="status-dot"></span>
-        Software Developer Intern · Currently Working
-      </div>
-
-      <h1>
-        Ranjan Kumar<br>
-        <span>Upadhyay</span>
-      </h1>
-
-      <div class="hero-role">
-        <span id="typing"></span>
-      </div>
-
-      <p class="hero-description">
-        Software Developer with practical experience working on
-        multi-module PMS/ERP software, application workflows,
-        customer-specific requirements, manual testing, bug fixing,
-        reporting, deployment and cybersecurity-focused projects.
-      </p>
-
-      <div class="hero-buttons">
-
-        <a
-          href="resume.pdf"
-          target="_blank"
-          class="btn btn-primary"
-        >
-          Resume ↗
-        </a>
-
-        <a
-          href="https://github.com/rajankumarup56"
-          target="_blank"
-          class="btn btn-secondary"
-        >
-          GitHub ↗
-        </a>
-
-        <a
-          href="https://www.linkedin.com/in/ranjan-kumar-upadhyay"
-          target="_blank"
-          class="btn btn-secondary"
-        >
-          LinkedIn ↗
-        </a>
-
-        <a
-          href="#work"
-          class="btn btn-secondary"
-        >
-          Explore Work ↓
-        </a>
-
-      </div>
-
+    <div class="eyebrow">
+      <span class="status-dot"></span>
+      Software Developer · Cyber Security
     </div>
 
+    <h1>
+      Ranjan Kumar<br>
+      <span class="gradient-text">Upadhyay</span>
+    </h1>
 
-    <div class="profile-card">
+    <div class="hero-subtitle">
+      <span id="typing"></span>
+    </div>
 
-      <div class="profile-avatar">
-        RK
-      </div>
+    <p class="hero-description">
+      Software Developer with practical experience in PMS/ERP software,
+      web development, cloud monitoring, cybersecurity and DevOps-oriented
+      infrastructure.
+    </p>
 
-      <h3>Software Developer</h3>
+    <div class="actions">
 
-      <p>
-        Development · Testing · Debugging ·
-        PMS/ERP · Cloud · Cybersecurity
-      </p>
+      <button
+        class="btn btn-primary"
+        onclick="openPDF('resume.pdf','Resume')"
+      >
+        📄 View Resume
+      </button>
 
-      <div class="profile-line"></div>
+      <a
+        class="btn"
+        href="resume.pdf"
+        download
+      >
+        ⬇ Download Resume
+      </a>
 
-      <div class="quick-info">
+      <a
+        class="btn"
+        href="https://github.com/rajankumarup56"
+        target="_blank"
+        rel="noopener"
+      >
+        GitHub
+      </a>
 
-        <div>
-          <span>Current</span>
-          <span>Software Developer Intern</span>
-        </div>
-
-        <div>
-          <span>Focus</span>
-          <span>Application Development</span>
-        </div>
-
-        <div>
-          <span>Education</span>
-          <span>MCA · Cyber Security</span>
-        </div>
-
-        <div>
-          <span>Location</span>
-          <span>India</span>
-        </div>
-
-      </div>
+      <a
+        class="btn"
+        href="https://www.linkedin.com/in/ranjan-kumar-upadhyay"
+        target="_blank"
+        rel="noopener"
+      >
+        LinkedIn
+      </a>
 
     </div>
 
@@ -1045,100 +926,68 @@ footer{
 </header>
 
 
-<!-- =========================
+<!-- =======================================================
      ABOUT
-========================= -->
+======================================================= -->
 
 <section id="about">
 
-  <div class="container">
+  <div class="section-heading">
+    <div class="section-label">Profile</div>
+    <h2>About Me</h2>
+    <p>
+      A career journey combining software development, business operations,
+      cloud/security learning and real-world enterprise software exposure.
+    </p>
+  </div>
 
-    <div class="section-title">
-      <div class="eyebrow">Profile</div>
-      <h2>More Than Just a Developer Profile</h2>
+  <div class="about-grid">
 
-      <p>
-        My experience combines real-world software development,
-        application testing, business workflows, cloud security
-        learning and cybersecurity research.
+    <div class="card">
+
+      <p class="about-text">
+
+        I am a Software Developer with an academic background in
+        <span class="highlight">Cyber Security</span> and practical exposure
+        to business software, PMS/ERP workflows, web systems, cloud monitoring
+        and application support.
+
+        <br><br>
+
+        My current professional experience is focused on a
+        <span class="highlight">PMS/ERP software ecosystem</span>, where I work
+        with application workflows, sales processes, reporting, testing,
+        debugging, customer requirements and deployment-related activities.
+
+        <br><br>
+
+        Alongside development, I have built knowledge in AWS cloud security,
+        DevOps practices, Git/GitHub, Linux, automation and cybersecurity.
+        I also have ongoing full-stack learning through Coding Ninjas.
       </p>
+
     </div>
 
+    <div class="quick-facts">
 
-    <div class="about-grid">
-
-      <div class="card about-card fade">
-
-        <h3>What I Work On</h3>
-
-        <p>
-          I currently work with a multi-module PMS/ERP software
-          environment where development work is closely connected
-          with business processes, testing, customer requirements
-          and deployment.
-        </p>
-
-        <div class="highlight-list">
-
-          <div class="highlight">
-            Business workflow implementation
-          </div>
-
-          <div class="highlight">
-            Feature enhancement and debugging
-          </div>
-
-          <div class="highlight">
-            Manual testing and test reporting
-          </div>
-
-          <div class="highlight">
-            Customer issue investigation
-          </div>
-
-          <div class="highlight">
-            Deployment and change management
-          </div>
-
-        </div>
-
+      <div class="fact">
+        <strong>Current Focus</strong>
+        <span>Software Development / PMS / ERP</span>
       </div>
 
+      <div class="fact">
+        <strong>Academic Focus</strong>
+        <span>MCA — Cyber Security</span>
+      </div>
 
-      <div class="card about-card fade">
+      <div class="fact">
+        <strong>Cloud & Security</strong>
+        <span>AWS CloudTrail · CloudWatch · Threat Detection</span>
+      </div>
 
-        <h3>My Technical Direction</h3>
-
-        <p>
-          My current direction is software development with a
-          strong interest in backend systems, cloud environments
-          and cybersecurity.
-        </p>
-
-        <div class="highlight-list">
-
-          <div class="highlight">
-            Backend and application workflows
-          </div>
-
-          <div class="highlight">
-            Cloud monitoring and security
-          </div>
-
-          <div class="highlight">
-            Threat detection concepts
-          </div>
-
-          <div class="highlight">
-            Testing and problem solving
-          </div>
-
-          <div class="highlight">
-            Continuous learning through real projects
-          </div>
-
-        </div>
-
+      <div class="fact">
+        <strong>Development</strong>
+        <span>HTML · CSS · JavaScript · Node.js · ASP.NET</span>
       </div>
 
     </div>
@@ -1148,515 +997,374 @@ footer{
 </section>
 
 
-<!-- =========================
-     REAL WORK / PMS
-========================= -->
-
-<section id="work">
-
-  <div class="container">
-
-    <div class="section-title">
-
-      <div class="eyebrow">Real-World Work</div>
-
-      <h2>PMS / ERP Software Experience</h2>
-
-      <p>
-        My strongest practical development experience comes from
-        working on a multi-module PMS/ERP ecosystem and its
-        connected business workflows.
-      </p>
-
-    </div>
-
-
-    <div class="card featured fade">
-
-      <div class="featured-grid">
-
-        <div>
-
-          <div class="project-type">
-            Current Professional Work
-          </div>
-
-          <h3>
-            Multi-Module PMS / ERP Application
-          </h3>
-
-          <p>
-            Working across multiple modules rather than a single
-            isolated feature. Development tasks are assigned,
-            implemented, manually tested, documented, checked in,
-            published and then verified through further testing.
-          </p>
-
-
-          <div class="feature-points">
-
-            <div>
-              Sales module and lifting workflow
-            </div>
-
-            <div>
-              Floating-button based compact data window
-            </div>
-
-            <div>
-              PMS software ↔ business website synchronization workflow
-            </div>
-
-            <div>
-              WhatsApp communication and post-lifting workflow
-            </div>
-
-            <div>
-              Printing and business-document output requirements
-            </div>
-
-            <div>
-              Report and Excel export corrections
-            </div>
-
-            <div>
-              Manual testing across multiple modules
-            </div>
-
-            <div>
-              Customer-specific feature development and issue fixing
-            </div>
-
-          </div>
-
-
-          <div class="tag-row">
-
-            <span class="tag">PMS / ERP</span>
-            <span class="tag">Sales</span>
-            <span class="tag">Workflow</span>
-            <span class="tag">Testing</span>
-            <span class="tag">TFS</span>
-            <span class="tag">PowerShell</span>
-            <span class="tag">Deployment</span>
-
-          </div>
-
-        </div>
-
-
-        <div class="project-visual">
-
-          <div>
-
-            <strong>PMS</strong>
-
-            <span>
-              Application → Sync → Business Data →
-              Communication → Print
-            </span>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <div class="workflow">
-
-      <div class="card workflow-card fade">
-
-        <div class="workflow-number">01</div>
-
-        <h3>Requirement</h3>
-
-        <p>
-          Understand assigned business requirement,
-          customer issue or workflow problem.
-        </p>
-
-      </div>
-
-
-      <div class="card workflow-card fade">
-
-        <div class="workflow-number">02</div>
-
-        <h3>Development</h3>
-
-        <p>
-          Modify application logic, features,
-          reports or workflow behaviour.
-        </p>
-
-      </div>
-
-
-      <div class="card workflow-card fade">
-
-        <div class="workflow-number">03</div>
-
-        <h3>Testing</h3>
-
-        <p>
-          Manually verify functionality, reports,
-          outputs and related scenarios.
-        </p>
-
-      </div>
-
-
-      <div class="card workflow-card fade">
-
-        <div class="workflow-number">04</div>
-
-        <h3>Check-in & Publish</h3>
-
-        <p>
-          Compare changes, check in with a message,
-          publish verified changes and coordinate testing.
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     EXPERIENCE
-========================= -->
-
-<section id="experience">
-
-  <div class="container">
-
-    <div class="section-title">
-
-      <div class="eyebrow">Professional Journey</div>
-
-      <h2>Experience</h2>
-
-      <p>
-        A career path that moved from operations and reporting
-        into software development and cybersecurity.
-      </p>
-
-    </div>
-
-
-    <div class="timeline">
-
-
-      <!-- SOFTWARE INTERN -->
-
-      <div class="timeline-item fade">
-
-        <div class="timeline-dot"></div>
-
-        <div class="card">
-
-          <div class="timeline-date">
-            CURRENT · ONGOING
-          </div>
-
-          <h3>
-            Software Developer Intern — PMS / ERP Software
-          </h3>
-
-          <p>
-            Working on a multi-module PMS/ERP software environment,
-            contributing to application workflows, feature
-            development, manual testing, debugging, reporting,
-            deployment and customer-specific requirements.
-          </p>
-
-          <ul>
-
-            <li>
-              Worked on Sales module and lifting workflow.
-            </li>
-
-            <li>
-              Improved floating-button functionality and
-              compact windows for relevant sales data.
-            </li>
-
-            <li>
-              Worked on PMS application and connected
-              business website synchronization workflows.
-            </li>
-
-            <li>
-              Worked on WhatsApp communication and
-              post-lifting requirements.
-            </li>
-
-            <li>
-              Worked on printing workflows and
-              business-specific output requirements.
-            </li>
-
-            <li>
-              Performed manual testing across multiple modules
-              and prepared testing reports.
-            </li>
-
-            <li>
-              Fixed report and Excel-export issues involving
-              headers, editability and incorrect date recognition.
-            </li>
-
-            <li>
-              Used VS Code and PowerShell for debugging,
-              fixing and validation.
-            </li>
-
-            <li>
-              Compared code changes using TFS / Team Explorer
-              and performed check-ins with meaningful messages.
-            </li>
-
-            <li>
-              Published verified changes to the main server
-              and coordinated further testing.
-            </li>
-
-            <li>
-              Investigated customer-reported problems,
-              implemented fixes and communicated resolutions.
-            </li>
-
-          </ul>
-
-          <div class="tag-row">
-
-            <span class="tag">Software Development</span>
-            <span class="tag">PMS / ERP</span>
-            <span class="tag">Manual Testing</span>
-            <span class="tag">Bug Fixing</span>
-            <span class="tag">TFS</span>
-            <span class="tag">PowerShell</span>
-            <span class="tag">Deployment</span>
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <!-- AUTOLIV -->
-
-      <div class="timeline-item fade">
-
-        <div class="timeline-dot"></div>
-
-        <div class="card">
-
-          <div class="timeline-date">
-            JUNE 2023 – JUNE 2025 · BENGALURU
-          </div>
-
-          <h3>
-            Production Operator — Autoliv India Pvt. Ltd.
-          </h3>
-
-          <p>
-            Worked in a structured production environment with
-            exposure to operational procedures, quality-focused
-            processes, teamwork and disciplined execution.
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <!-- HOSPITAL -->
-
-      <div class="timeline-item fade">
-
-        <div class="timeline-dot"></div>
-
-        <div class="card">
-
-          <div class="timeline-date">
-            OCTOBER 2020 – APRIL 2023 · ARA, BHOJPUR, BIHAR
-          </div>
-
-          <h3>
-            Billing & Hospital Operations — Health Haven Hospital
-          </h3>
-
-          <p>
-            Worked on billing, reporting and day-to-day hospital
-            operational processes.
-          </p>
-
-          <ul>
-
-            <li>
-              Patient billing and test billing.
-            </li>
-
-            <li>
-              Excel-based report preparation and reporting to doctors.
-            </li>
-
-            <li>
-              Patient admission and discharge processing.
-            </li>
-
-            <li>
-              Bed allocation and emergency-patient operations.
-            </li>
-
-            <li>
-              Maintenance of operational records and
-              administrative support.
-            </li>
-
-          </ul>
-
-        </div>
-
-      </div>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
+<!-- =======================================================
      SKILLS
-========================= -->
+======================================================= -->
 
 <section id="skills">
 
-  <div class="container">
+  <div class="section-heading">
+    <div class="section-label">Technology</div>
+    <h2>Skills & Working Knowledge</h2>
+    <p>
+      Skills are presented according to practical exposure and current learning
+      rather than overstating expertise.
+    </p>
+  </div>
 
-    <div class="section-title">
+  <div class="skills-grid">
 
-      <div class="eyebrow">Technical Stack</div>
+    <div class="card skill-card fade">
+      <h3>Web Development</h3>
+      <p>
+        Strong fundamentals with ongoing full-stack development learning.
+      </p>
 
-      <h2>Skills & Working Knowledge</h2>
+      <div class="tags">
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">React — Learning</span>
+      </div>
+    </div>
+
+
+    <div class="card skill-card fade">
+      <h3>Backend</h3>
+      <p>
+        Backend concepts and practical application exposure.
+      </p>
+
+      <div class="tags">
+        <span class="tag">Node.js</span>
+        <span class="tag">Express.js</span>
+        <span class="tag">ASP.NET</span>
+        <span class="tag">C#</span>
+        <span class="tag">REST APIs</span>
+      </div>
+    </div>
+
+
+    <div class="card skill-card fade">
+      <h3>Database</h3>
+      <p>
+        Relational and NoSQL database fundamentals.
+      </p>
+
+      <div class="tags">
+        <span class="tag">MongoDB</span>
+        <span class="tag">SQL</span>
+      </div>
+    </div>
+
+
+    <div class="card skill-card fade">
+      <h3>Cloud & Security</h3>
+      <p>
+        Cloud monitoring and security-focused project experience.
+      </p>
+
+      <div class="tags">
+        <span class="tag">AWS</span>
+        <span class="tag">CloudTrail</span>
+        <span class="tag">CloudWatch</span>
+        <span class="tag">IAM</span>
+        <span class="tag">Log Analysis</span>
+        <span class="tag">Threat Detection</span>
+      </div>
+    </div>
+
+
+    <div class="card skill-card fade">
+      <h3>DevOps</h3>
+      <p>
+        Training-based and practical foundational knowledge.
+      </p>
+
+      <div class="tags">
+        <span class="tag">Linux</span>
+        <span class="tag">Git</span>
+        <span class="tag">GitHub</span>
+        <span class="tag">Jenkins</span>
+        <span class="tag">AWS</span>
+        <span class="tag">Terraform Fundamentals</span>
+        <span class="tag">Ansible</span>
+      </div>
+    </div>
+
+
+    <div class="card skill-card fade">
+      <h3>Tools</h3>
+      <p>
+        Tools used for development, debugging, reporting and collaboration.
+      </p>
+
+      <div class="tags">
+        <span class="tag">VS Code</span>
+        <span class="tag">PowerShell</span>
+        <span class="tag">TFS</span>
+        <span class="tag">Excel</span>
+        <span class="tag">GitLab</span>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =======================================================
+     EXPERIENCE
+======================================================= -->
+
+<section id="experience">
+
+  <div class="section-heading">
+    <div class="section-label">Career</div>
+    <h2>Professional Experience</h2>
+  </div>
+
+  <div class="timeline">
+
+
+    <!-- CURRENT INTERNSHIP -->
+
+    <div class="timeline-item fade">
+
+      <div class="timeline-dot"></div>
+
+      <div class="card">
+
+        <h3>Software Developer Intern — PMS/ERP Software</h3>
+
+        <div class="timeline-date">
+          Ongoing · Noida, India
+        </div>
+
+        <p>
+          Working on a multi-module PMS/ERP software ecosystem involving
+          desktop software, synchronized web systems and business workflows.
+        </p>
+
+        <ul>
+
+          <li>
+            Worked on Sales module workflows including lifting-related
+            business processes.
+          </li>
+
+          <li>
+            Worked with the floating-button workflow and compact data windows
+            used during sales operations.
+          </li>
+
+          <li>
+            Worked with PMS software and its synchronized business website
+            workflow where application data is synchronized and displayed
+            through the web system.
+          </li>
+
+          <li>
+            Worked on PMS Community / PMS Advance related business workflows.
+          </li>
+
+          <li>
+            Worked on customer-specific feature requirements and application
+            improvements.
+          </li>
+
+          <li>
+            Worked with WhatsApp communication workflows associated with
+            business processes.
+          </li>
+
+          <li>
+            Worked on printing workflows where information received through
+            links had to be printed according to business requirements.
+          </li>
+
+          <li>
+            Performed manual testing across multiple PMS/ERP modules.
+          </li>
+
+          <li>
+            Prepared detailed testing reports and documented observed issues.
+          </li>
+
+          <li>
+            Investigated report and Excel-export problems including incorrect
+            headers, date-format issues and editable-data problems.
+          </li>
+
+          <li>
+            Used VS Code and PowerShell for debugging and validation.
+          </li>
+
+          <li>
+            Compared changes using TFS / Team Explorer and performed check-in
+            with meaningful messages.
+          </li>
+
+          <li>
+            Published verified changes to the main server after testing.
+          </li>
+
+          <li>
+            Investigated customer-reported issues and implemented fixes.
+          </li>
+
+          <li>
+            Followed daily work assignments and submitted end-of-day reports.
+          </li>
+
+        </ul>
+
+        <div class="tags">
+
+          <span class="tag">PMS / ERP</span>
+          <span class="tag">Software Development</span>
+          <span class="tag">Sales Workflow</span>
+          <span class="tag">Testing</span>
+          <span class="tag">Bug Fixing</span>
+          <span class="tag">TFS</span>
+          <span class="tag">PowerShell</span>
+          <span class="tag">Reporting</span>
+          <span class="tag">Deployment</span>
+
+        </div>
+
+      </div>
 
     </div>
 
 
-    <div class="skills-grid">
+    <!-- AUTOLIV -->
+
+    <div class="timeline-item fade">
+
+      <div class="timeline-dot"></div>
+
+      <div class="card">
+
+        <h3>Production Operator — Autoliv India Pvt. Ltd.</h3>
+
+        <div class="timeline-date">
+          June 2023 – June 2025 · Bengaluru, India
+        </div>
+
+        <p>
+          Worked in a production environment with exposure to operational
+          processes, quality-focused work, defined procedures and
+          process-oriented execution.
+        </p>
+
+      </div>
+
+    </div>
 
 
-      <div class="card skill-card fade">
+    <!-- HOSPITAL -->
 
-        <h3>Application Development</h3>
+    <div class="timeline-item fade">
 
-        <div class="skill-list">
+      <div class="timeline-dot"></div>
 
-          <span class="skill">HTML</span>
-          <span class="skill">CSS</span>
-          <span class="skill">JavaScript</span>
-          <span class="skill">Node.js</span>
-          <span class="skill">Express.js</span>
-          <span class="skill">ASP.NET / C#</span>
-          <span class="skill">REST APIs</span>
+      <div class="card">
+
+        <h3>Billing & Hospital Operations — Health Haven Hospital</h3>
+
+        <div class="timeline-date">
+          October 2020 – April 2023 · Ara, Bhojpur, Bihar
+        </div>
+
+        <ul>
+
+          <li>Handled patient billing and test billing.</li>
+
+          <li>
+            Prepared Excel-based reports and submitted reports to doctors.
+          </li>
+
+          <li>
+            Managed patient admission and discharge processes.
+          </li>
+
+          <li>
+            Managed bed allocation and emergency-patient related operations.
+          </li>
+
+          <li>
+            Maintained operational records and supported daily hospital
+            administration.
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+
+    <!-- DEVOPS TRAINING -->
+
+    <div class="timeline-item fade">
+
+      <div class="timeline-dot"></div>
+
+      <div class="card">
+
+        <h3>DevOps Training — Orbiqe Technology Pvt. Ltd.</h3>
+
+        <div class="timeline-date">
+          July 2025 – April 2026 · Noida, India
+        </div>
+
+        <p>
+          Completed structured DevOps-oriented training under the
+          BSDM / Skill India program framework, with exposure to cloud,
+          automation, version control and DevOps practices.
+        </p>
+
+        <div class="tags">
+
+          <span class="tag">Linux</span>
+          <span class="tag">AWS</span>
+          <span class="tag">Git</span>
+          <span class="tag">GitHub</span>
+          <span class="tag">SQL</span>
+          <span class="tag">CI/CD</span>
+          <span class="tag">Jenkins</span>
+          <span class="tag">Terraform</span>
+          <span class="tag">Ansible</span>
+          <span class="tag">Prometheus</span>
+          <span class="tag">Grafana</span>
 
         </div>
 
       </div>
 
+    </div>
 
-      <div class="card skill-card fade">
 
-        <h3>Database</h3>
+    <!-- CODING NINJAS -->
 
-        <div class="skill-list">
+    <div class="timeline-item fade">
 
-          <span class="skill">MongoDB</span>
-          <span class="skill">SQL</span>
-          <span class="skill">Database Concepts</span>
+      <div class="timeline-dot"></div>
 
+      <div class="card">
+
+        <h3>Full Stack Developer Learning — Coding Ninjas</h3>
+
+        <div class="timeline-date">
+          2024 – January 2027 · Online
         </div>
 
-      </div>
-
-
-      <div class="card skill-card fade">
-
-        <h3>Cloud & Security</h3>
-
-        <div class="skill-list">
-
-          <span class="skill">AWS</span>
-          <span class="skill">CloudTrail</span>
-          <span class="skill">CloudWatch</span>
-          <span class="skill">IAM</span>
-          <span class="skill">Log Analysis</span>
-          <span class="skill">Threat Detection</span>
-
-        </div>
-
-      </div>
-
-
-      <div class="card skill-card fade">
-
-        <h3>Development Tools</h3>
-
-        <div class="skill-list">
-
-          <span class="skill">Git</span>
-          <span class="skill">GitHub</span>
-          <span class="skill">TFS</span>
-          <span class="skill">Team Explorer</span>
-          <span class="skill">VS Code</span>
-          <span class="skill">PowerShell</span>
-
-        </div>
-
-      </div>
-
-
-      <div class="card skill-card fade">
-
-        <h3>Testing & Reporting</h3>
-
-        <div class="skill-list">
-
-          <span class="skill">Manual Testing</span>
-          <span class="skill">Test Reports</span>
-          <span class="skill">Bug Fixing</span>
-          <span class="skill">Excel Reports</span>
-          <span class="skill">Export Validation</span>
-
-        </div>
-
-      </div>
-
-
-      <div class="card skill-card fade">
-
-        <h3>Cybersecurity</h3>
-
-        <div class="skill-list">
-
-          <span class="skill">Authentication</span>
-          <span class="skill">Threat Hunting</span>
-          <span class="skill">Anomaly Detection</span>
-          <span class="skill">Security Monitoring</span>
-          <span class="skill">Log Analysis</span>
-
-        </div>
+        <p>
+          Ongoing structured full-stack development learning. Stronger focus
+          has been placed on HTML, CSS and JavaScript fundamentals, with
+          backend and full-stack technologies being developed progressively.
+        </p>
 
       </div>
 
@@ -1667,675 +1375,569 @@ footer{
 </section>
 
 
-<!-- =========================
+<!-- =======================================================
      PROJECTS
-========================= -->
+======================================================= -->
 
 <section id="projects">
 
-  <div class="container">
+  <div class="section-heading">
 
-    <div class="section-title">
+    <div class="section-label">Engineering Work</div>
 
-      <div class="eyebrow">Selected Work</div>
+    <h2>Projects</h2>
 
-      <h2>Projects</h2>
+    <p>
+      Selected projects demonstrating development, cloud, cybersecurity
+      and system-design interests.
+    </p>
+
+  </div>
+
+
+  <div class="project-filters">
+
+    <button
+      class="filter-btn active"
+      onclick="filterProjects('all',this)"
+    >
+      All
+    </button>
+
+    <button
+      class="filter-btn"
+      onclick="filterProjects('security',this)"
+    >
+      Security
+    </button>
+
+    <button
+      class="filter-btn"
+      onclick="filterProjects('cloud',this)"
+    >
+      Cloud
+    </button>
+
+    <button
+      class="filter-btn"
+      onclick="filterProjects('web',this)"
+    >
+      Web
+    </button>
+
+  </div>
+
+
+  <div class="projects-grid" id="projectsContainer">
+
+
+    <article
+      class="card project-card fade"
+      data-category="security cloud"
+    >
+
+      <span class="project-type">
+        Cloud Security
+      </span>
+
+      <h3>
+        Cloud Security Monitoring & Threat Detection
+      </h3>
 
       <p>
-        Academic, security and development projects that demonstrate
-        practical learning and technical exploration.
+        Prototype security monitoring architecture using AWS CloudTrail,
+        CloudWatch, log analysis, metric filters and alerting concepts
+        for suspicious cloud activity.
       </p>
 
-    </div>
+      <div class="tags">
+        <span class="tag">AWS</span>
+        <span class="tag">CloudTrail</span>
+        <span class="tag">CloudWatch</span>
+        <span class="tag">SNS</span>
+        <span class="tag">Security</span>
+      </div>
 
-
-    <div class="project-toolbar">
-
-      <button
-        class="filter-btn active"
-        data-filter="all"
-        onclick="filterProjects('all')"
-      >
-        All
-      </button>
-
-      <button
-        class="filter-btn"
-        data-filter="security"
-        onclick="filterProjects('security')"
-      >
-        Security
-      </button>
-
-      <button
-        class="filter-btn"
-        data-filter="backend"
-        onclick="filterProjects('backend')"
-      >
-        Backend
-      </button>
-
-      <button
-        class="filter-btn"
-        data-filter="cloud"
-        onclick="filterProjects('cloud')"
-      >
-        Cloud
-      </button>
-
-      <button
-        class="filter-btn"
-        data-filter="mern"
-        onclick="filterProjects('mern')"
-      >
-        MERN
-      </button>
-
-    </div>
-
-
-    <div class="projects-grid" id="projectsContainer">
-
-
-      <!-- MCA PROJECT -->
-
-      <article
-        class="card project-card fade"
-        data-category="security cloud"
-      >
-
-        <div class="project-type">
-          MCA · Cyber Security
-        </div>
-
-        <h3>
-          Autonomous Cyber Defense System using AI
-        </h3>
-
-        <p>
-          Prototype concept for AI-assisted real-time threat
-          hunting in cloud-integrated ERP environments using
-          authorized audit telemetry, contextual features,
-          anomaly-oriented prioritisation and analyst review.
-        </p>
-
-        <div class="tag-row">
-
-          <span class="tag">Cybersecurity</span>
-          <span class="tag">AI</span>
-          <span class="tag">AWS</span>
-          <span class="tag">Threat Hunting</span>
-
-        </div>
+      <div class="project-actions">
 
         <a
-          href="documents/mca/final-report.pdf"
+          class="btn btn-small"
+          href="https://github.com/rajankumarup56/cloud-security-monitoring-aws"
           target="_blank"
-          class="btn btn-secondary"
+          rel="noopener"
         >
-          View Report ↗
+          View GitHub
         </a>
 
-      </article>
+      </div>
+
+    </article>
 
 
-      <!-- CLOUD SECURITY -->
+    <article
+      class="card project-card fade"
+      data-category="security cloud"
+    >
 
-      <article
-        class="card project-card fade"
-        data-category="security cloud backend"
-      >
+      <span class="project-type">
+        AWS Infrastructure
+      </span>
 
-        <div class="project-type">
-          Cloud Security
-        </div>
+      <h3>
+        Secure AWS Cloud Infrastructure
+      </h3>
 
-        <h3>
-          Cloud Security Monitoring & Threat Detection
-        </h3>
+      <p>
+        Secure cloud infrastructure concept using VPC architecture,
+        public/private subnet separation, bastion-host access and security
+        controls.
+      </p>
 
-        <p>
-          Security monitoring prototype based on AWS CloudTrail
-          and CloudWatch concepts for identifying suspicious
-          cloud activities and generating security alerts.
-        </p>
+      <div class="tags">
+        <span class="tag">AWS</span>
+        <span class="tag">VPC</span>
+        <span class="tag">EC2</span>
+        <span class="tag">IAM</span>
+        <span class="tag">Security</span>
+      </div>
 
-        <div class="tag-row">
-
-          <span class="tag">AWS</span>
-          <span class="tag">CloudTrail</span>
-          <span class="tag">CloudWatch</span>
-          <span class="tag">Security</span>
-
-        </div>
+      <div class="project-actions">
 
         <a
+          class="btn btn-small"
+          href="https://github.com/rajankumarup56/secure-aws-cloud-infrastructure"
+          target="_blank"
+          rel="noopener"
+        >
+          View GitHub
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <article
+      class="card project-card fade"
+      data-category="security cloud"
+    >
+
+      <span class="project-type">
+        Cloud Architecture
+      </span>
+
+      <h3>
+        AWS Highly Available Web Architecture
+      </h3>
+
+      <p>
+        Cloud architecture project focused on availability, networking,
+        security boundaries and scalable AWS deployment concepts.
+      </p>
+
+      <div class="tags">
+        <span class="tag">AWS</span>
+        <span class="tag">Architecture</span>
+        <span class="tag">EC2</span>
+        <span class="tag">Networking</span>
+      </div>
+
+      <div class="project-actions">
+
+        <a
+          class="btn btn-small"
+          href="https://github.com/rajankumarup56/aws-highly-available-web-architecture"
+          target="_blank"
+          rel="noopener"
+        >
+          View GitHub
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <article
+      class="card project-card fade"
+      data-category="security"
+    >
+
+      <span class="project-type">
+        DevSecOps
+      </span>
+
+      <h3>
+        Secure CI/CD DevSecOps Pipeline
+      </h3>
+
+      <p>
+        DevSecOps-oriented project exploring secure CI/CD workflow concepts,
+        automation, source control and security integration.
+      </p>
+
+      <div class="tags">
+        <span class="tag">Git</span>
+        <span class="tag">CI/CD</span>
+        <span class="tag">DevSecOps</span>
+        <span class="tag">Jenkins</span>
+      </div>
+
+      <div class="project-actions">
+
+        <a
+          class="btn btn-small"
+          href="https://github.com/rajankumarup56/secure-cicd-devsecops-pipeline"
+          target="_blank"
+          rel="noopener"
+        >
+          View GitHub
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <article
+      class="card project-card fade"
+      data-category="security"
+    >
+
+      <span class="project-type">
+        Cyber Security
+      </span>
+
+      <h3>
+        Network Security Threat Detection Lab
+      </h3>
+
+      <p>
+        Cybersecurity lab project focused on understanding network threats,
+        monitoring concepts and security analysis workflows.
+      </p>
+
+      <div class="tags">
+        <span class="tag">Cyber Security</span>
+        <span class="tag">Threat Detection</span>
+        <span class="tag">Network Security</span>
+      </div>
+
+      <div class="project-actions">
+
+        <a
+          class="btn btn-small"
+          href="https://github.com/rajankumarup56/network-security-threat-detection-lab"
+          target="_blank"
+          rel="noopener"
+        >
+          View GitHub
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <article
+      class="card project-card fade"
+      data-category="web"
+    >
+
+      <span class="project-type">
+        Web Development
+      </span>
+
+      <h3>
+        MERN Stack Authentication System
+      </h3>
+
+      <p>
+        Learning project focused on authentication, REST APIs, user
+        management and secure application concepts using the MERN ecosystem.
+      </p>
+
+      <div class="tags">
+        <span class="tag">MongoDB</span>
+        <span class="tag">Express</span>
+        <span class="tag">Node.js</span>
+        <span class="tag">React</span>
+        <span class="tag">JWT</span>
+      </div>
+
+      <div class="project-actions">
+
+        <a
+          class="btn btn-small"
           href="https://github.com/rajankumarup56"
           target="_blank"
-          class="btn btn-secondary"
+          rel="noopener"
         >
-          GitHub ↗
+          GitHub Profile
         </a>
 
-      </article>
+      </div>
 
-
-      <!-- MERN -->
-
-      <article
-        class="card project-card fade"
-        data-category="mern backend"
-      >
-
-        <div class="project-type">
-          Development
-        </div>
-
-        <h3>
-          MERN Stack Authentication System
-        </h3>
-
-        <p>
-          Authentication-focused project exploring React,
-          Node.js, Express and MongoDB with secure user
-          management concepts such as password hashing and JWT.
-        </p>
-
-        <div class="tag-row">
-
-          <span class="tag">React</span>
-          <span class="tag">Node.js</span>
-          <span class="tag">Express</span>
-          <span class="tag">MongoDB</span>
-
-        </div>
-
-        <a
-          href="https://github.com/rajankumarup56"
-          target="_blank"
-          class="btn btn-secondary"
-        >
-          GitHub ↗
-        </a>
-
-      </article>
-
-
-      <!-- FRONTEND -->
-
-      <article
-        class="card project-card fade"
-        data-category="backend mern"
-      >
-
-        <div class="project-type">
-          Web Development
-        </div>
-
-        <h3>
-          Frontend Login System
-        </h3>
-
-        <p>
-          Responsive login interface developed using HTML,
-          CSS and JavaScript with client-side validation
-          and user-focused interface behaviour.
-        </p>
-
-        <div class="tag-row">
-
-          <span class="tag">HTML</span>
-          <span class="tag">CSS</span>
-          <span class="tag">JavaScript</span>
-
-        </div>
-
-        <a
-          href="https://github.com/rajankumarup56"
-          target="_blank"
-          class="btn btn-secondary"
-        >
-          GitHub ↗
-        </a>
-
-      </article>
-
-
-      <!-- SCAN TO INVOICE -->
-
-      <article
-        class="card project-card fade"
-        data-category="backend"
-      >
-
-        <div class="project-type">
-          Professional Project
-        </div>
-
-        <h3>
-          Scan to Invoice
-        </h3>
-
-        <p>
-          A company project developed during professional work,
-          focused on converting scanned information into an
-          invoice-oriented workflow.
-        </p>
-
-        <div class="tag-row">
-
-          <span class="tag">Application</span>
-          <span class="tag">Workflow</span>
-          <span class="tag">Invoice</span>
-
-        </div>
-
-        <a
-          href="https://github.com/rajankumarup56"
-          target="_blank"
-          class="btn btn-secondary"
-        >
-          Related Work ↗
-        </a>
-
-      </article>
-
-
-    </div>
+    </article>
 
   </div>
 
 </section>
 
 
-<!-- =========================
-     MCA PROJECT HUB
-========================= -->
+<!-- =======================================================
+     MCA PROJECT
+======================================================= -->
 
 <section id="mca">
 
-  <div class="container">
+  <div class="section-heading">
 
-    <div class="section-title">
+    <div class="section-label">
+      MCA · Cyber Security
+    </div>
 
-      <div class="eyebrow">Academic Project</div>
+    <h2>Major Academic Project</h2>
 
-      <h2>MCA Cyber Security Project Hub</h2>
+  </div>
+
+
+  <div class="card featured-project">
+
+    <span class="featured-label">
+      Prototype · AI · Cloud Security
+    </span>
+
+    <h3>
+      Autonomous Cyber Defense System using AI for Real-Time Threat Hunting
+      in Cloud ERP
+    </h3>
+
+    <p>
+      An AI-assisted, human-governed cybersecurity prototype designed for
+      threat hunting in cloud-integrated ERP environments.
+    </p>
+
+
+    <div class="architecture">
+
+      <span class="arch-node">
+        Cloud Audit Logs
+      </span>
+
+      <span class="arrow">→</span>
+
+      <span class="arch-node">
+        Normalization
+      </span>
+
+      <span class="arrow">→</span>
+
+      <span class="arch-node">
+        Feature Engineering
+      </span>
+
+      <span class="arrow">→</span>
+
+      <span class="arch-node">
+        Anomaly Prioritisation
+      </span>
+
+      <span class="arrow">→</span>
+
+      <span class="arch-node">
+        Analyst Review
+      </span>
+
+    </div>
+
+
+    <div class="tags">
+
+      <span class="tag">AI-assisted Threat Hunting</span>
+      <span class="tag">Cloud ERP</span>
+      <span class="tag">AWS</span>
+      <span class="tag">CloudTrail</span>
+      <span class="tag">CloudWatch</span>
+      <span class="tag">Python</span>
+      <span class="tag">Anomaly Detection</span>
+      <span class="tag">Cyber Security</span>
+
+    </div>
+
+
+    <div class="project-actions">
+
+      <button
+        class="btn btn-primary btn-small"
+        onclick="openPDF(
+          'documents/mca/final-report.pdf',
+          'MCA Final Project Report'
+        )"
+      >
+        📘 Final Report
+      </button>
+
+      <button
+        class="btn btn-small"
+        onclick="openPDF(
+          'documents/mca/synopsis.pdf',
+          'MCA Project Synopsis'
+        )"
+      >
+        Synopsis
+      </button>
+
+      <button
+        class="btn btn-small"
+        onclick="openPDF(
+          'documents/mca/interim-report.pdf',
+          'MCA Interim Report'
+        )"
+      >
+        Interim Report
+      </button>
+
+      <button
+        class="btn btn-small"
+        onclick="openPDF(
+          'documents/mca/plagiarism-report.pdf',
+          'Plagiarism Report'
+        )"
+      >
+        Plagiarism Report
+      </button>
+
+      <button
+        class="btn btn-small"
+        onclick="openVideo(
+          'presentations/mca/presentation-video.mp4',
+          'MCA Project Presentation'
+        )"
+      >
+        ▶ Presentation Video
+      </button>
+
+      <button
+        class="btn btn-small"
+        onclick="openPPT(
+          'presentations/mca/presentation.pptx',
+          'MCA Project Presentation'
+        )"
+      >
+        📊 View PPT
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =======================================================
+     DOCUMENTS
+======================================================= -->
+
+<section id="documents">
+
+  <div class="section-heading">
+
+    <div class="section-label">Academic Evidence</div>
+
+    <h2>Documents & Presentations</h2>
+
+    <p>
+      Selected academic documents are available for transparent project
+      verification.
+    </p>
+
+  </div>
+
+
+  <div class="document-grid">
+
+
+    <div class="card document-card fade">
+
+      <h3>Project Synopsis</h3>
 
       <p>
-        Complete academic project documentation and presentation
-        resources in one place.
+        MCA Cyber Security project synopsis.
       </p>
 
-    </div>
-
-
-    <div class="mca-grid">
-
-
-      <div class="card fade">
-
-        <div class="project-type">
-          Final Project
-        </div>
-
-        <h3 style="margin:10px 0 12px;font-family:'Space Grotesk',sans-serif;">
-          Autonomous Cyber Defense System using AI for
-          Real-Time Threat Hunting in Cloud ERP
-        </h3>
-
-        <p style="color:var(--muted);line-height:1.8;font-size:.87rem;">
-
-          A prototype-level cybersecurity research and design
-          project focused on AI-assisted threat hunting,
-          cloud audit telemetry, contextual analysis,
-          anomaly-oriented prioritisation and
-          human-governed analyst review.
-
-        </p>
-
-
-        <div class="tag-row">
-
-          <span class="tag">MCA</span>
-          <span class="tag">Cyber Security</span>
-          <span class="tag">AI</span>
-          <span class="tag">Cloud ERP</span>
-
-        </div>
-
-      </div>
-
-
-      <div class="card fade">
-
-        <h3 style="font-family:'Space Grotesk',sans-serif;">
-          Project Resources
-        </h3>
-
-
-        <div class="document-grid">
-
-          <div class="doc">
-
-            <div class="doc-info">
-              <strong>Synopsis</strong>
-              <span>Project proposal</span>
-            </div>
-
-            <a
-              href="documents/mca/synopsis.pdf"
-              target="_blank"
-            >
-              Open ↗
-            </a>
-
-          </div>
-
-
-          <div class="doc">
-
-            <div class="doc-info">
-              <strong>Interim Report</strong>
-              <span>Progress report</span>
-            </div>
-
-            <a
-              href="documents/mca/interim-report.pdf"
-              target="_blank"
-            >
-              Open ↗
-            </a>
-
-          </div>
-
-
-          <div class="doc">
-
-            <div class="doc-info">
-              <strong>Final Report</strong>
-              <span>Complete project report</span>
-            </div>
-
-            <a
-              href="documents/mca/final-report.pdf"
-              target="_blank"
-            >
-              Open ↗
-            </a>
-
-          </div>
-
-
-          <div class="doc">
-
-            <div class="doc-info">
-              <strong>Plagiarism Report</strong>
-              <span>Academic evidence</span>
-            </div>
-
-            <a
-              href="documents/mca/plagiarism-report.pdf"
-              target="_blank"
-            >
-              Open ↗
-            </a>
-
-          </div>
-
-
-          <div class="doc">
-
-            <div class="doc-info">
-              <strong>PPT Presentation</strong>
-              <span>Presentation file</span>
-            </div>
-
-            <a
-              href="presentations/mca/presentation.pptx"
-              target="_blank"
-            >
-              Open ↗
-            </a>
-
-          </div>
-
-
-          <div class="doc">
-
-            <div class="doc-info">
-              <strong>6-Minute Video</strong>
-              <span>Project presentation</span>
-            </div>
-
-            <a
-              href="presentations/mca/presentation-video.mp4"
-              target="_blank"
-            >
-              Watch ↗
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     CAREER / EDUCATION
-========================= -->
-
-<section id="career">
-
-  <div class="container">
-
-    <div class="section-title">
-
-      <div class="eyebrow">Career Timeline</div>
-
-      <h2>Education & Journey</h2>
+      <button
+        class="btn btn-small"
+        onclick="openPDF(
+          'documents/mca/synopsis.pdf',
+          'Project Synopsis'
+        )"
+      >
+        Preview PDF
+      </button>
 
     </div>
 
 
-    <div class="career-grid">
+    <div class="card document-card fade">
 
-
-      <div class="card career-card fade">
-
-        <div class="career-year">
-          2018
-        </div>
-
-        <h3>BCA</h3>
-
-        <p>
-          Bachelor of Computer Applications
-        </p>
-
-      </div>
-
-
-      <div class="card career-card fade">
-
-        <div class="career-year">
-          2019–2022
-        </div>
-
-        <h3>B.Ed</h3>
-
-        <p>
-          Education and professional development period
-        </p>
-
-      </div>
-
-
-      <div class="card career-card fade">
-
-        <div class="career-year">
-          2020–2023
-        </div>
-
-        <h3>Hospital Operations</h3>
-
-        <p>
-          Billing, Excel reporting and administrative operations
-        </p>
-
-      </div>
-
-
-      <div class="card career-card fade">
-
-        <div class="career-year">
-          2023–2025
-        </div>
-
-        <h3>Autoliv</h3>
-
-        <p>
-          Production operations in Bengaluru
-        </p>
-
-      </div>
-
-
-      <div class="card career-card fade">
-
-        <div class="career-year">
-          2024–2026
-        </div>
-
-        <h3>MCA · Cyber Security</h3>
-
-        <p>
-          Jain University
-        </p>
-
-      </div>
-
-
-      <div class="card career-card fade">
-
-        <div class="career-year">
-          Current
-        </div>
-
-        <h3>Software Development</h3>
-
-        <p>
-          PMS / ERP application development internship
-        </p>
-
-      </div>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     PROFESSIONAL HUB
-========================= -->
-
-<section id="hub">
-
-  <div class="container">
-
-    <div class="section-title">
-
-      <div class="eyebrow">Professional Hub</div>
-
-      <h2>My Professional Links</h2>
+      <h3>Interim Report</h3>
 
       <p>
-        Important platforms and resources connected to my career.
+        Interim project report and methodology.
       </p>
+
+      <button
+        class="btn btn-small"
+        onclick="openPDF(
+          'documents/mca/interim-report.pdf',
+          'Interim Report'
+        )"
+      >
+        Preview PDF
+      </button>
 
     </div>
 
 
-    <div class="hub-grid">
+    <div class="card document-card fade">
 
+      <h3>Final Report</h3>
 
-      <a
-        class="card hub-card fade"
-        href="https://github.com/rajankumarup56"
-        target="_blank"
+      <p>
+        Complete MCA project report.
+      </p>
+
+      <button
+        class="btn btn-primary btn-small"
+        onclick="openPDF(
+          'documents/mca/final-report.pdf',
+          'Final Project Report'
+        )"
       >
+        Preview PDF
+      </button>
 
-        <div class="icon">⌘</div>
-
-        <h3>GitHub</h3>
-
-        <p>
-          Source code, repositories and projects
-        </p>
-
-      </a>
+    </div>
 
 
-      <a
-        class="card hub-card fade"
-        href="https://www.linkedin.com/in/ranjan-kumar-upadhyay"
-        target="_blank"
+    <div class="card document-card fade">
+
+      <h3>Presentation</h3>
+
+      <p>
+        Project presentation and recorded explanation.
+      </p>
+
+      <button
+        class="btn btn-small"
+        onclick="openVideo(
+          'presentations/mca/presentation-video.mp4',
+          'Project Presentation Video'
+        )"
       >
-
-        <div class="icon">in</div>
-
-        <h3>LinkedIn</h3>
-
-        <p>
-          Professional profile and career network
-        </p>
-
-      </a>
-
-
-      <a
-        class="card hub-card fade"
-        href="https://www.naukri.com/"
-        target="_blank"
-      >
-
-        <div class="icon">N</div>
-
-        <h3>Naukri</h3>
-
-        <p>
-          Job search and professional opportunities
-        </p>
-
-      </a>
-
-
-      <a
-        class="card hub-card fade"
-        href="resume.pdf"
-        target="_blank"
-      >
-
-        <div class="icon">CV</div>
-
-        <h3>Resume</h3>
-
-        <p>
-          Current professional resume
-        </p>
-
-      </a>
-
+        Watch Video
+      </button>
 
     </div>
 
@@ -2344,70 +1946,169 @@ footer{
 </section>
 
 
-<!-- =========================
+<!-- =======================================================
+     DIGITAL PRESENCE
+======================================================= -->
+
+<section id="profiles">
+
+  <div class="section-heading">
+
+    <div class="section-label">Online Presence</div>
+
+    <h2>Professional Profiles</h2>
+
+    <p>
+      Public professional and learning profiles.
+    </p>
+
+  </div>
+
+
+  <div class="profile-grid">
+
+
+    <a
+      class="card profile-card fade"
+      href="https://github.com/rajankumarup56"
+      target="_blank"
+      rel="noopener"
+    >
+      <small>DEVELOPMENT</small>
+      <h3>GitHub</h3>
+      <p>
+        Source code, projects and development work.
+      </p>
+    </a>
+
+
+    <a
+      class="card profile-card fade"
+      href="https://gitlab.com/rajankumarup56"
+      target="_blank"
+      rel="noopener"
+    >
+      <small>DEVOPS</small>
+      <h3>GitLab</h3>
+      <p>
+        GitLab profile and repository activity.
+      </p>
+    </a>
+
+
+    <a
+      class="card profile-card fade"
+      href="https://www.linkedin.com/in/ranjan-kumar-upadhyay"
+      target="_blank"
+      rel="noopener"
+    >
+      <small>PROFESSIONAL</small>
+      <h3>LinkedIn</h3>
+      <p>
+        Professional profile and career information.
+      </p>
+    </a>
+
+
+    <a
+      class="card profile-card fade"
+      href="https://profile.indeed.com/?hl=en_IN&co=IN&from=gnav-homepage"
+      target="_blank"
+      rel="noopener"
+    >
+      <small>JOB PROFILE</small>
+      <h3>Indeed</h3>
+      <p>
+        Indeed professional profile.
+      </p>
+    </a>
+
+
+    <a
+      class="card profile-card fade"
+      href="https://unstop.com/u/ranjanmk94543"
+      target="_blank"
+      rel="noopener"
+    >
+      <small>CAREER</small>
+      <h3>Unstop</h3>
+      <p>
+        Student and career opportunities profile.
+      </p>
+    </a>
+
+
+    <a
+      class="card profile-card fade"
+      href="https://classroom.codingninjas.com/app/profile/your-account/general"
+      target="_blank"
+      rel="noopener"
+    >
+      <small>LEARNING</small>
+      <h3>Coding Ninjas</h3>
+      <p>
+        Full-stack development learning profile.
+      </p>
+    </a>
+
+
+    <a
+      class="card profile-card fade"
+      href="mailto:rajankumarup56@zohomail.in"
+    >
+      <small>CONTACT</small>
+      <h3>Email</h3>
+      <p>
+        Send an email to rajankumarup56@zohomail.in
+      </p>
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- =======================================================
      CONTACT
-========================= -->
+======================================================= -->
 
 <section id="contact">
 
-  <div class="container">
+  <div class="card contact-card">
 
-    <div class="card contact-box fade">
+    <h2>
+      Let's Connect
+    </h2>
 
-      <div class="section-title" style="margin-bottom:20px;">
+    <p>
+      Open to software development, backend, full-stack and
+      cloud/security-oriented opportunities.
+    </p>
 
-        <div class="eyebrow">
-          Contact
-        </div>
+    <div class="actions">
 
-        <h2>
-          Let's Connect
-        </h2>
+      <a
+        class="btn btn-primary"
+        href="mailto:rajankumarup56@zohomail.in"
+      >
+        ✉ Email Me
+      </a>
 
-      </div>
+      <a
+        class="btn"
+        href="tel:+916205536067"
+      >
+        ☎ Call
+      </a>
 
-
-      <p>
-        I am open to software development opportunities,
-        backend/application development roles and opportunities
-        where development, cloud and cybersecurity knowledge
-        can be applied together.
-      </p>
-
-
-      <div class="contact-links">
-
-        <a
-          class="btn btn-primary"
-          href="mailto:rajankumarup56@zohomail.in"
-        >
-          Email Me
-        </a>
-
-        <a
-          class="btn btn-secondary"
-          href="tel:+916205536067"
-        >
-          Call
-        </a>
-
-        <a
-          class="btn btn-secondary"
-          href="https://github.com/rajankumarup56"
-          target="_blank"
-        >
-          GitHub
-        </a>
-
-        <a
-          class="btn btn-secondary"
-          href="https://www.linkedin.com/in/ranjan-kumar-upadhyay"
-          target="_blank"
-        >
-          LinkedIn
-        </a>
-
-      </div>
+      <a
+        class="btn"
+        href="https://www.linkedin.com/in/ranjan-kumar-upadhyay"
+        target="_blank"
+        rel="noopener"
+      >
+        LinkedIn
+      </a>
 
     </div>
 
@@ -2416,81 +2117,99 @@ footer{
 </section>
 
 
-<!-- =========================
+<!-- =======================================================
+     MODAL WINDOW
+======================================================= -->
+
+<div
+  class="modal"
+  id="viewerModal"
+  onclick="closeOnOutside(event)"
+>
+
+  <div class="modal-window">
+
+    <div class="modal-header">
+
+      <div
+        class="modal-title"
+        id="modalTitle"
+      >
+        Preview
+      </div>
+
+      <div class="modal-tools">
+
+        <button
+          class="modal-open"
+          id="modalOpenBtn"
+          onclick="openCurrentExternally()"
+        >
+          ↗ Open
+        </button>
+
+        <button
+          class="modal-close"
+          onclick="closeModal()"
+        >
+          ✕
+        </button>
+
+      </div>
+
+    </div>
+
+    <div
+      class="modal-body"
+      id="modalBody"
+    ></div>
+
+  </div>
+
+</div>
+
+
+<!-- =======================================================
      FOOTER
-========================= -->
+======================================================= -->
 
 <footer>
 
-  <div class="container footer-inner">
+  <p>
+    © <span id="year"></span>
+    Ranjan Kumar Upadhyay · Software Developer
+  </p>
 
-    <span>
-      © <span id="year"></span>
-      Ranjan Kumar Upadhyay
-    </span>
-
-    <span>
-      Software Developer ·
-      PMS/ERP · Cloud · Cybersecurity
-    </span>
-
-  </div>
+  <p style="margin-top:6px;">
+    Built with HTML, CSS & JavaScript
+  </p>
 
 </footer>
 
 
 <script>
 
-/* =========================
-   MOBILE MENU
-========================= */
-
-function toggleMenu(){
-
-  const nav = document.getElementById("navLinks");
-
-  nav.classList.toggle("open");
-
-}
-
-
-/* CLOSE MOBILE MENU */
-
-document.querySelectorAll(".nav-links a").forEach(link => {
-
-  link.addEventListener("click", () => {
-
-    document
-      .getElementById("navLinks")
-      .classList.remove("open");
-
-  });
-
-});
-
-
-/* =========================
+/* =========================================================
    TYPING EFFECT
-========================= */
+========================================================= */
 
-const roles = [
-
+const typingText = [
   "Software Developer",
-  "PMS / ERP Application Developer",
-  "Backend & Application Development",
-  "Cloud & Cybersecurity Enthusiast"
-
+  "PMS / ERP Software Developer",
+  "Backend & Web Development",
+  "Cyber Security Enthusiast",
+  "Cloud & DevOps Learner"
 ];
 
-let roleIndex = 0;
+let textIndex = 0;
 let charIndex = 0;
 let deleting = false;
 
-function typeRole(){
+function typeEffect(){
 
   const element = document.getElementById("typing");
 
-  const current = roles[roleIndex];
+  const current = typingText[textIndex];
 
   if(!deleting){
 
@@ -2503,10 +2222,8 @@ function typeRole(){
 
       deleting = true;
 
-      setTimeout(typeRole,1800);
-
+      setTimeout(typeEffect,1400);
       return;
-
     }
 
   }else{
@@ -2520,80 +2237,219 @@ function typeRole(){
 
       deleting = false;
 
-      roleIndex =
-        (roleIndex + 1) % roles.length;
+      textIndex =
+        (textIndex + 1) % typingText.length;
 
     }
 
   }
 
   setTimeout(
-    typeRole,
+    typeEffect,
     deleting ? 45 : 80
   );
-
 }
 
-typeRole();
+typeEffect();
 
 
-/* =========================
+/* =========================================================
    PROJECT FILTER
-========================= */
+========================================================= */
 
-function filterProjects(category){
+function filterProjects(category, button){
 
-  const cards =
-    document.querySelectorAll(
-      "#projectsContainer .project-card"
+  document
+    .querySelectorAll(".filter-btn")
+    .forEach(btn =>
+      btn.classList.remove("active")
     );
 
-  const buttons =
-    document.querySelectorAll(".filter-btn");
+  button.classList.add("active");
 
-  buttons.forEach(button => {
+  document
+    .querySelectorAll(".project-card")
+    .forEach(card => {
 
-    button.classList.remove("active");
+      const categories =
+        card.dataset.category;
 
-    if(button.dataset.filter === category){
+      if(
+        category === "all" ||
+        categories.includes(category)
+      ){
 
-      button.classList.add("active");
+        card.style.display = "flex";
 
-    }
+      }else{
 
-  });
+        card.style.display = "none";
 
+      }
 
-  cards.forEach(card => {
-
-    const categories =
-      card.dataset.category || "";
-
-    if(
-      category === "all" ||
-      categories.includes(category)
-    ){
-
-      card.style.display = "flex";
-
-    }else{
-
-      card.style.display = "none";
-
-    }
-
-  });
+    });
 
 }
 
 
-/* =========================
+/* =========================================================
+   MODAL SYSTEM
+========================================================= */
+
+const modal =
+  document.getElementById("viewerModal");
+
+const modalBody =
+  document.getElementById("modalBody");
+
+const modalTitle =
+  document.getElementById("modalTitle");
+
+const modalOpenBtn =
+  document.getElementById("modalOpenBtn");
+
+let currentURL = "";
+
+
+/* PDF */
+
+function openPDF(url,title){
+
+  currentURL = url;
+
+  modalTitle.textContent = title;
+
+  modalBody.innerHTML = `
+    <iframe
+      src="${url}"
+      title="${title}"
+    ></iframe>
+  `;
+
+  modal.classList.add("show");
+
+}
+
+
+/* VIDEO */
+
+function openVideo(url,title){
+
+  currentURL = url;
+
+  modalTitle.textContent = title;
+
+  modalBody.innerHTML = `
+    <video
+      controls
+      autoplay
+      playsinline
+    >
+      <source
+        src="${url}"
+        type="video/mp4"
+      >
+
+      Your browser does not support video playback.
+    </video>
+  `;
+
+  modal.classList.add("show");
+
+}
+
+
+/* PPTX */
+
+function openPPT(url,title){
+
+  currentURL = url;
+
+  modalTitle.textContent = title;
+
+  const absoluteURL =
+    new URL(url,window.location.href).href;
+
+  const viewerURL =
+    "https://view.officeapps.live.com/op/embed.aspx?src="
+    + encodeURIComponent(absoluteURL);
+
+  modalBody.innerHTML = `
+    <iframe
+      src="${viewerURL}"
+      title="${title}"
+      allowfullscreen
+    ></iframe>
+  `;
+
+  modal.classList.add("show");
+
+}
+
+
+/* OPEN EXTERNALLY */
+
+function openCurrentExternally(){
+
+  if(currentURL){
+
+    window.open(
+      currentURL,
+      "_blank",
+      "noopener,noreferrer"
+    );
+
+  }
+
+}
+
+
+/* CLOSE */
+
+function closeModal(){
+
+  modal.classList.remove("show");
+
+  modalBody.innerHTML = "";
+
+}
+
+
+/* OUTSIDE CLICK */
+
+function closeOnOutside(event){
+
+  if(event.target === modal){
+
+    closeModal();
+
+  }
+
+}
+
+
+/* ESC KEY */
+
+document.addEventListener(
+  "keydown",
+  function(event){
+
+    if(event.key === "Escape"){
+
+      closeModal();
+
+    }
+
+  }
+);
+
+
+/* =========================================================
    SCROLL ANIMATION
-========================= */
+========================================================= */
 
 const observer =
   new IntersectionObserver(
-
     entries => {
 
       entries.forEach(entry => {
@@ -2607,30 +2463,25 @@ const observer =
       });
 
     },
-
     {
       threshold:.12
     }
-
   );
 
 
 document
   .querySelectorAll(".fade")
-  .forEach(element => {
-
-    observer.observe(element);
-
-  });
+  .forEach(element =>
+    observer.observe(element)
+  );
 
 
-/* =========================
-   FOOTER YEAR
-========================= */
+/* =========================================================
+   YEAR
+========================================================= */
 
 document.getElementById("year").textContent =
   new Date().getFullYear();
-
 
 </script>
 
